@@ -1,0 +1,24 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: calc(100vh - 164px);
+    color: #646464;
+    font-family: 'Lato';
+}
+
+/* Logo */
+
+.navbar-brand {
+    font-size: 24pt;
+    color: #646464;
+    font-weight: 700;
+}
+
+
+/* ------------------------------------------------------------------------------- Fonts */
+
+.text-black {
+    color: black !important;
+}
