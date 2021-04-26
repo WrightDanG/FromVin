@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',  # Only needed if we want FB/Google logins.
     'guide',
+    'products',
 ]
 
 MIDDLEWARE = [
