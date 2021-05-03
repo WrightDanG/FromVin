@@ -29,6 +29,13 @@ body {
     color: black !important;
 }
 
+/* ------------------------------------------------------------------------------- Cards */
+
+.card-img-top {
+    max-width: 250px;
+    max-height: 350px;
+}
+
 
 /* -------------------------------- Media Queries */
 
