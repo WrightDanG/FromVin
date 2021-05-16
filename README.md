@@ -172,3 +172,22 @@ Find Wines and Cheeses to your taste.
 #### Dessert Wines
 - sauternes1 [pixabay.com](https://pixabay.com/illustrations/sweet-white-wine-ivan-gan-2383801/) - wendy-chan
 - sauternes2 [pixabay.com](https://pixabay.com/photos/wine-white-wine-sauterne-bordeaux-360299/) - luctheo
+- delaforce1 [pixabay.com](https://pixabay.com/photos/drink-wine-alcohol-bottle-glass-3377626/) - DonnaSenzaFiato
+- cruz1 [pixabay.com](https://pixabay.com/photos/port-wine-porto-cruz-wine-tourism-2264096/) - Gentle07
+- ferreira1 [pixabay.com](https://pixabay.com/photos/bottle-wine-port-tequila-porto-4571546/) - AlLes
+
+
+#### Soft Cheeses
+- soft1 [pixabay.com](https://pixabay.com/photos/oven-baked-cheese-cheese-baked-2817144/) - Couleur
+- soft2 [pixabay.com](https://pixabay.com/photos/breadbasket-soft-cheese-creamy-3704381/) - Couleur
+- soft3 [pixabay.com](https://pixabay.com/photos/cheese-platter-food-snack-grapes-6153716/) - Mammiya
+- soft4 [pixabay.com](https://pixabay.com/photos/cheese-k%C3%A4seplatte-food-cheese-plate-4016647/) - ReinhardThrainer
+- soft5 [pixabay.com](https://pixabay.com/photos/cheese-k%C3%A4seplatte-buffet-food-eat-4059250/) - congerdesign
+- soft6 [pixabay.com](https://pixabay.com/photos/cheese-soft-cheese-food-eat-hearty-4107310/) - ThorstenF
+- soft7 [pixabay.com](https://pixabay.com/photos/cheese-soft-cheese-brie-cheese-3686070/) - lucas_holiday
+- soft8 [pixabay.com](https://pixabay.com/photos/soft-cheese-camembert-blue-cheese-822350/) - EME
+- soft9 [pixabay.com](https://pixabay.com/photos/cheese-brie-curds-cracker-knife-1081082/) - dbreen
+- soft10 [pixabay.com](https://pixabay.com/photos/soft-cheese-camembert-blue-cheese-822346/) - EME
+- soft11 [pixabay.com](https://pixabay.com/photos/epoisse-cheese-cheese-fruit-pairing-2256023/) - Jaques2017
+- soft12 [pixabay.com](https://pixabay.com/photos/st-pat-cheese-milk-product-food-3540/) - PDPhotos
+
