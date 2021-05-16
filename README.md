@@ -141,11 +141,11 @@ Find Wines and Cheeses to your taste.
 
 ### Images
 #### Red Wines
-- merlot1 image - [Wikimedia commons](https://commons.wikimedia.org/wiki/File:Estepa_Merlot_Red_Wine_Series_(4532104130).jpg)
-- penfolds1 - [Pxhere.com](https://pxhere.com/en/photo/1151043) Commercial Commons licence
-- bordeaux1 - [Pxhere.com](https://pxhere.com/id/photo/868424) Commercial Commons licence
-- werken1 - [Pxhere.com](https://pxhere.com/fi/photo/694393) Commercial commons licence
-- thalia1 - [hippopx.com](https://www.hippopx.com/en/wine-bottle-red-wine-fruit-wine-red-cork-bottle-52248) Commercial commons licence
+- merlot1 image - [Wikimedia commons](https://commons.wikimedia.org/wiki/File:Estepa_Merlot_Red_Wine_Series_(4532104130).jpg) - Creative Commons Licence
+- penfolds1 - [Pxhere.com](https://pxhere.com/en/photo/1151043) - Creative Commons Licence
+- bordeaux1 - [Pxhere.com](https://pxhere.com/id/photo/868424) - Creative Commons Licence
+- werken1 - [Pxhere.com](https://pxhere.com/fi/photo/694393) - Creative Commons Licence
+- thalia1 - [hippopx.com](https://www.hippopx.com/en/wine-bottle-red-wine-fruit-wine-red-cork-bottle-52248)- Creative Commons Licence
 - swartland1 - [pixabay.com](https://pixabay.com/photos/wine-alcohol-drink-glass-bottle-3180220/) - stevepb
 - kalimna1 - [pixabay.com](https://pixabay.com/photos/bottle-beverage-wine-drink-alcohol-50571/) - Holgi
 - smithhook1 - [pixabay.com](https://pixabay.com/photos/wine-bottle-alcohol-drink-party-3916274/) - pixexid
@@ -191,3 +191,16 @@ Find Wines and Cheeses to your taste.
 - soft11 [pixabay.com](https://pixabay.com/photos/epoisse-cheese-cheese-fruit-pairing-2256023/) - Jaques2017
 - soft12 [pixabay.com](https://pixabay.com/photos/st-pat-cheese-milk-product-food-3540/) - PDPhotos
 
+#### Hard Cheeses
+- hard1 [pixabay.com](https://pixabay.com/photos/cheese-jarlsberg-norway-semi-soft-739735/) - pixel1
+- hard2 [Pxhere](https://pxhere.com/en/photo/1637327) - Creative Commons Licence
+- hard3 [pixabay.com](https://pxhere.com/en/photo/1624743) - Creative Commons Licence
+- hard4 [pixabay.com](https://pixabay.com/photos/cheese-cheese-loaf-market-stall-4021659/) - ReinhardThrainer
+- hard5 [pixabay.com](https://pixnio.com/food-and-drink/cheese/red-dragon-cheese#) - Jon Sullivan
+- hard6 [pixabay.com](https://pixabay.com/photos/hard-cheese-home-production-928848/) - Fotovektor
+- hard7 [pixabay.com](https://pixabay.com/photos/wood-knife-cheese-food-hard-slice-3794057/) - 6342722
+- hard8 [pixabay.com](https://pixnio.com/food-and-drink/cheese/red-windsor-cheese#) - Jon Sullivan
+- hard9 [pixabay.com](https://pixabay.com/photos/cheese-semi-hard-cheese-gouda-1029190/) - Peggy_Marco
+- hard10 [pixabay.com](https://pixabay.com/photos/cheese-milk-product-cheese-loaf-4752609/) - moritz320
+- hard11 [pixabay.com](https://pixnio.com/food-and-drink/cheese/pecorino-romano-cheese#) - Jon Sullivan
+- hard12 [pixabay.com](https://pixnio.com/food-and-drink/cheese/port-salut-cheese#) - Jon Sullivan
