@@ -194,13 +194,24 @@ Find Wines and Cheeses to your taste.
 #### Hard Cheeses
 - hard1 [pixabay.com](https://pixabay.com/photos/cheese-jarlsberg-norway-semi-soft-739735/) - pixel1
 - hard2 [Pxhere](https://pxhere.com/en/photo/1637327) - Creative Commons Licence
-- hard3 [pixabay.com](https://pxhere.com/en/photo/1624743) - Creative Commons Licence
+- hard3 [pxhere](https://pxhere.com/en/photo/1624743) - Creative Commons Licence
 - hard4 [pixabay.com](https://pixabay.com/photos/cheese-cheese-loaf-market-stall-4021659/) - ReinhardThrainer
-- hard5 [pixabay.com](https://pixnio.com/food-and-drink/cheese/red-dragon-cheese#) - Jon Sullivan
+- hard5 [Pixnio](https://pixnio.com/food-and-drink/cheese/red-dragon-cheese#) - Jon Sullivan
 - hard6 [pixabay.com](https://pixabay.com/photos/hard-cheese-home-production-928848/) - Fotovektor
 - hard7 [pixabay.com](https://pixabay.com/photos/wood-knife-cheese-food-hard-slice-3794057/) - 6342722
-- hard8 [pixabay.com](https://pixnio.com/food-and-drink/cheese/red-windsor-cheese#) - Jon Sullivan
+- hard8 [Pixnio](https://pixnio.com/food-and-drink/cheese/red-windsor-cheese#) - Jon Sullivan
 - hard9 [pixabay.com](https://pixabay.com/photos/cheese-semi-hard-cheese-gouda-1029190/) - Peggy_Marco
 - hard10 [pixabay.com](https://pixabay.com/photos/cheese-milk-product-cheese-loaf-4752609/) - moritz320
-- hard11 [pixabay.com](https://pixnio.com/food-and-drink/cheese/pecorino-romano-cheese#) - Jon Sullivan
-- hard12 [pixabay.com](https://pixnio.com/food-and-drink/cheese/port-salut-cheese#) - Jon Sullivan
+- hard11 [Pixnio](https://pixnio.com/food-and-drink/cheese/pecorino-romano-cheese#) - Jon Sullivan
+- hard12 [Pixnio](https://pixnio.com/food-and-drink/cheese/port-salut-cheese#) - Jon Sullivan
+
+#### Accompaniments
+- chutney1 - [pxhere](https://pxhere.com/en/photo/119408) - Creative Commons Licence
+- chutney2 - [pxhere](https://pxhere.com/en/photo/816936) - Creative Commons Licence
+- chutney3 - [pxhere](https://pxhere.com/en/photo/1408223) - Creative Commons Licence
+- crackers1 - [pxhere](https://pxhere.com/en/photo/1247287) - Creative Commons Licence
+- crackers2 - [pxhere](https://pxhere.com/en/photo/1132679) - Creative Commons Licence
+- bread1 - [pxhere](https://pxhere.com/en/photo/595291) - Creative Commons Licence
+- bread2 - [pxhere](https://pxhere.com/en/photo/1221989) - Creative Commons Licence
+- bread3 - [pxhere](https://pxhere.com/en/photo/25751) - Creative Commons Licence
+- bread4 - [pxhere](https://pxhere.com/en/photo/399077) - Creative Commons Licence
