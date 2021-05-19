@@ -135,7 +135,7 @@ Find Wines and Cheeses to your taste.
 
 
 ## Attribution
-
+- Assistance with adding django messages found at [Ordinarycoders.com](https://www.ordinarycoders.com/blog/article/django-messages-framework)
 
 
 
