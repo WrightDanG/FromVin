@@ -57,6 +57,9 @@ body {
     cursor: pointer;
 }
 
+.alert {
+    /* margin-top: 20px; */
+}
 
 /* -------------------------------- Media Queries */
 
@@ -90,5 +93,9 @@ body {
 
     body {
         height: calc(100vh - 150px);
+    }
+
+    .alert {
+        margin-top: 200px;
     }
 }
