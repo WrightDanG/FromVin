@@ -131,3 +131,12 @@
     </div>
 </div>
 {% endblock %}
+
+<!-- Add stripe keys and elements -->
+{% block postloadjs %}
+{{ block.super }}
+<!-- Get from the view -->
+{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+{{ client_secret|json_script:"id_client_secret" }}
+<script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+{% endblock %}
