@@ -50,13 +50,14 @@ card.addEventListener('change', function (event) {
 var form = document.getElementById('payment-form');
 
 form.addEventListener('submit', function (ev) {
+    // Disable form post
     ev.preventDefault();
     // Disable multiple clicks and process payment
     card.update({
         'disabled': true
     });
     $('#submit-button').attr('disabled', true);
-    stripe.confirmCardPayment(clientSecret, {
+    stripe.confirmCardPayment(client_secret, {
         payment_method: {
             card: card,
         }
@@ -70,11 +71,13 @@ form.addEventListener('submit', function (ev) {
                 </span>
                 <span>${result.error.message}</span>`;
             $(errorDiv).html(html);
+            // Enable form so that errors can be repaired
             card.update({
                 'disabled': false
             });
             $('#submit-button').attr('disabled', false);
         } else {
+            // Submit the form on successful status
             if (result.paymentIntent.status === 'succeeded') {
                 form.submit();
             }
