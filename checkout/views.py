@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.contrib import messages
 from django.conf import settings
+from django.views.decorators.http import require_POST
 
 from .forms import OrderForm
 from bag.contexts import bag_contents
@@ -8,9 +9,31 @@ from .models import Order, OrderLineItem
 from products.models import Product
 
 import stripe
+import json
+
+# Pass data to the webhook as to whether the user wanted to save details
+
+
+@require_POST
+def cache_checkout_data(request):
+    try:
+        # Get the first part of the secret which is the payment intent ID
+        pid = request.POST.get('client_secret').split('_secret')[0]
+        stripe.api_key = settings.STRIPE_SECRET_KEY
+        # Add metadata to pass information save details and bag contents
+        stripe.PaymentIntent.modify(pid, metadata={
+            'bag': json.dumps(request.session.get('bag', {})),
+            'save_info': request.POST.get('save_info'),
+            'username': request.user,
+        })
+        return HttpResponse(status=200)
+    except Exception as e:
+        messages.error(request, 'Sorry, your payment cannot be \
+            processed right now. Please try again later.')
+        return HttpResponse(content=e, status=400)
+
 
 # Handle the overall checkout view
-
 
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
