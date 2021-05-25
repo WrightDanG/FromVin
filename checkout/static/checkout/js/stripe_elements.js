@@ -57,6 +57,9 @@ form.addEventListener('submit', function (ev) {
         'disabled': true
     });
     $('#submit-button').attr('disabled', true);
+    // Fade our form and fade in loading spinner
+    $('#payment-form').fadeToggle(100);
+    $('#loading-overlay').fadeToggle(100);
     stripe.confirmCardPayment(client_secret, {
         payment_method: {
             card: card,
@@ -71,6 +74,9 @@ form.addEventListener('submit', function (ev) {
                 </span>
                 <span>${result.error.message}</span>`;
             $(errorDiv).html(html);
+            // Fade the form back if there is an error
+            $('#payment-form').fadeToggle(100);
+            $('#loading-overlay').fadeToggle(100);
             // Enable form so that errors can be repaired
             card.update({
                 'disabled': false
