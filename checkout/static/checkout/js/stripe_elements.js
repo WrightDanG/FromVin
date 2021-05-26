@@ -66,7 +66,7 @@ form.addEventListener('submit', function (ev) {
     var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
     var postData = {
         'csrfmiddlewaretoken': csrfToken,
-        'client_secret': clientSecret,
+        'client_secret': client_secret,
         'save_info': saveInfo,
     };
     var url = '/checkout/cache_checkout_data/';
