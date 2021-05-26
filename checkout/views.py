@@ -57,8 +57,14 @@ def checkout(request):
         # Create an instance of the form with the data
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-            # Save the order
-            order = order_form.save()
+            # Save the order, but not commit until the next save
+            order = order_form.save(commit=False)
+            # set the unique order values for stripe
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            order.original_bag = json.dumps(bag)
+            # Save and commit the order
+            order.save()
             # Iterate through bag items to create OrderLines
             for item_id, item_data in bag.items():
                 try:
