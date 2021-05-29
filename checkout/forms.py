@@ -22,7 +22,6 @@ class OrderForm(forms.ModelForm):
             'full_name': 'Full Name',
             'email': 'Email Address',
             'phone_number': 'Phone Number',
-            'country': 'Country',
             'postcode': 'Postal Code',
             'town_or_city': 'Town or City',
             'street_address1': 'Street Address 1',
@@ -33,12 +32,14 @@ class OrderForm(forms.ModelForm):
         # focus first on the full name field
         self.fields['full_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            # add a star to required fields
-            if self.fields[field].required:
-                placeholder = f'{placeholders[field]} *'
-            else:
-                placeholder = placeholders[field]
-            # set placeholder text, stripe class and remove labels
-            self.fields[field].widget.attrs['placeholder'] = placeholder
+            # Ensure django doesn't throw an error as country is dropdown select
+            if field != 'country':
+                # add a star to required fields
+                if self.fields[field].required:
+                    placeholder = f'{placeholders[field]} *'
+                else:
+                    placeholder = placeholders[field]
+                # set placeholder text, stripe class and remove labels
+                self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             self.fields[field].label = False
