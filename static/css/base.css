@@ -122,6 +122,10 @@ select option[value=""] {
     color: #aab7c4 !important;
 }
 
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
