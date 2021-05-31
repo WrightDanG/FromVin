@@ -16,9 +16,6 @@ from django.contrib.messages import constants as messages
 import dj_database_url
 import django_heroku
 from decouple import config
-# import mimetypes
-# mimetypes.add_type("text/css", ".css", True)
-# mimetypes.add_type("text/html", ".css", True)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,10 +25,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-(hzm&&&uux41plxp%#5q*)8*9&#!p15k=y+cm6k!m4)9!sj(4t'
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['fromvin.herokuapp.com', 'localhost']
 

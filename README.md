@@ -136,6 +136,7 @@ Note for future - code to disable form and test webhooks can be found in BA prof
 
 ## Attribution
 - Assistance with adding django messages found at [Ordinarycoders.com](https://www.ordinarycoders.com/blog/article/django-messages-framework)
+- Assistance with deploying static files with heroku found at [dev.to](https://dev.to/developerroad/tutorial-deploying-a-django-app-on-heroku-4k6o) 
 
 
 
