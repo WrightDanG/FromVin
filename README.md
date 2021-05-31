@@ -85,7 +85,7 @@ Find Wines and Cheeses to your taste.
 
 
 #### Internal custom validation
-
+Note for future - code to disable form and test webhooks can be found in BA profile video 9, at the end. form.submit in stripe_elements.js.
 
 
 
