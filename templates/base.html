@@ -28,10 +28,10 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
+        </script>
     <!--Importing fontawesome icons -->
     <script src="https://kit.fontawesome.com/5b83da489c.js" crossorigin="anonymous"></script>
     <!-- Stripe -->
@@ -76,7 +76,7 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item">
-                        <a class="text-black nav-link" href="#">
+                        <a class="text-black nav-link" href="{% url 'guide' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-book fa-lg"></i></div>
                                 <p class="my-0">Guide</p>
@@ -84,7 +84,7 @@
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a class="text-black nav-link" href="#">
+                        <a class="text-black nav-link" href="{% url 'recommendation' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-question-circle fa-lg"></i></div>
                                 <p class="my-0">Recommend</p>
@@ -92,7 +92,7 @@
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a class="text-black nav-link" href="#">
+                        <a class="text-black nav-link" href="{% url 'products' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-wine-bottle fa-lg"></i></div>
                                 <p class="my-0">Shop</p>
