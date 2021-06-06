@@ -11,10 +11,16 @@ from.forms import WineForm, CheeseForm
 
 def recommendation(request):
     """ Returns the recommendation page. """
-    context = {}
+
+    products = Product.objects.all()
+    #categories = None
+
+    products = products.filter(category=2)
+    #categories = Category.objects.filter(name__in="red_wine")
+
+    context = {'products': products}
     context['wineform'] = WineForm()
     context['cheeseform'] = CheeseForm()
-
     # if 'wine_choice' in request.GET:
     #     wineValue = request.GET['wine_choice']
     #     print(wineValue)
