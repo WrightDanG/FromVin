@@ -161,7 +161,7 @@ if 'DEVELOPMENT' not in os.environ:
         'CLOUDINARY_URL': os.getenv('CLOUDINARY_URL', '')
     }
     DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-    NOIMAGE_URL = 'res.cloudinary.com/hytpjm4e2/image/upload/v1/media/'
+    NOIMAGE_URL = 'https://res.cloudinary.com/hytpjm4e2/image/upload/v1/media/'
 else: 
     NOIMAGE_URL = '/media/'
 
