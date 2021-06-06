@@ -10,20 +10,27 @@
 {% endblock %}
 
 {% block content %}
-<h1 class="display-4 text-success">Recommendation Text</h1>
-<h1 class="display-4 text-success">Recommendation Text</h1>
-<h1 class="display-4 text-success">Recommendation Text</h1>
-<h1 class="display-4 text-success">Recommendation Text</h1>
-<h1 class="display-4 text-success">Recommendation Text</h1>
-<h1 class="display-4 text-success">Recommendation Text</h1>
-<h1 class="display-4 text-success">Recommendation Text</h1>
 
-<h1 class="display-4 text-success">Recommendation Text</h1>
-<h1 class="display-4 text-success">Recommendation Text</h1>
-<h1 class="display-4 text-success">Recommendation Text</h1>
-<h1 class="display-4 text-success">Recommendation Text</h1>
-<h1 class="display-4 text-success">Recommendation Text</h1>
-<h1 class="display-4 text-success">Recommendation Text</h1>
-<h1 class="display-4 text-success">Recommendation Text</h1>
-<h1 class="display-4 text-success">Recommendation Text</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="logo-font mb-4">Recommend Me</h2>
+            <hr>
+        </div>
+    </div>
+
+
+    <form action="" method="post">{% csrf_token %}
+        {{ wineform | crispy }}
+        <input type="submit" value="Create" />
+    </form>
+
+    <form action="" method="post">{% csrf_token %}
+        {{ cheeseform | crispy }}
+        <input type="submit" value="Create" />
+    </form>
+
+</div>
 {% endblock %}
