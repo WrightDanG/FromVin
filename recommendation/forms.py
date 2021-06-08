@@ -3,6 +3,7 @@ from django.forms import ModelForm
 
 
 WINE_CHOICES = [
+    ('0', 'I like my wine...'),
     ('1', 'Red: Soft, fruity and light'),
     ('2', 'Red: Well rounded, berry-flavoured and full'),
     ('3', 'Red: Deep, Earthy and Poweful'),
@@ -14,6 +15,7 @@ WINE_CHOICES = [
 # Possibly change cats to be more approachable - Light / smelly / sweet
 
 CHEESE_CHOICES = [
+    ('0', 'I like my cheese...'),
     ('1', 'Soft: Crumbly, Mellow, Light '),
     ('2', 'Soft: Gooey, Creamy, Sweet-notes'),
     ('3', 'Soft: Punchy, Rich and Strong'),

@@ -22,13 +22,13 @@
     </div>
 
 
-    <form action="{% url 'recommendation' %}" method="GET">
+    <form action="{% url 'choose' %}" method="GET">
         <!-- {% csrf_token %} -->
         {{ wineform | crispy }}
         <input type="submit" value="Create" />
     </form>
 
-    <form action="{% url 'recommendation' %}" method="GET">
+    <form action="{% url 'choose' %}" method="GET">
         {{ cheeseform | crispy }}
         <input type="submit" value="Create" />
     </form>
