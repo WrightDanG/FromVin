@@ -1,5 +1,6 @@
 from django.views.generic.edit import CreateView
 from django.shortcuts import render
+from random import sample
 
 from products.models import Product, Category
 
@@ -37,15 +38,23 @@ def choose(request):
     if 'wine_choice' in request.GET:
         wineValue = request.GET['wine_choice']
         print(wineValue)
-        products = Product.objects.all()
-        products = products.filter(category=wineValue)
+        queryset = Product.objects.all()
+        filtered = queryset.filter(category=wineValue)
+        if filtered:
+            products = sample(list(filtered), 2)
+        else:
+            products = {}
     #categories = None
 
     elif 'cheese_choice' in request.GET:
         cheeseValue = request.GET['cheese_choice']
         print(cheeseValue)
-        products = Product.objects.all()
-        products = products.filter(category=cheeseValue)
+        queryset = Product.objects.all()
+        filtered = queryset.filter(category=cheeseValue)
+        if filtered:
+            products = sample(list(filtered), 2)
+        else:
+            products = {}
     #categories = None
 
     context = {'products': products}
