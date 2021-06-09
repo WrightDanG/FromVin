@@ -2,7 +2,7 @@ from django.views.generic.edit import CreateView
 from django.shortcuts import render
 from random import sample
 
-from products.models import Product, Category
+from products.models import Product, Category, TastingProfile
 
 from.forms import WineForm, CheeseForm
 
@@ -50,7 +50,7 @@ def choose(request):
         cheeseValue = request.GET['cheese_choice']
         print(cheeseValue)
         queryset = Product.objects.all()
-        filtered = queryset.filter(category=cheeseValue)
+        filtered = queryset.filter(tastingprofile=cheeseValue)
         if filtered:
             products = sample(list(filtered), 2)
         else:

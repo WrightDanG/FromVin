@@ -139,6 +139,7 @@ Note for future - code to disable form and test webhooks can be found in BA prof
 - Assistance with deploying static files with heroku found at [dev.to](https://dev.to/developerroad/tutorial-deploying-a-django-app-on-heroku-4k6o) 
 - Images resized for deployment using [Resizeimage.net](https://resizeimage.net/)
 - Addition of select form assistance using [GeeksforGeeks](https://www.geeksforgeeks.org/choicefield-django-forms/)
+- Assistance with getting a sample of Django data [Stackoverflow - lukeaus](https://stackoverflow.com/questions/22816704/django-get-a-random-object)
 
 
 
