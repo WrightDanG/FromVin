@@ -163,7 +163,7 @@ if 'DEVELOPMENT' not in os.environ:
     }
     DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
     NOIMAGE_URL = 'https://res.cloudinary.com/hytpjm4e2/image/upload/v1/media/'
-else: 
+else:
     NOIMAGE_URL = '/media/'
 
 # Password validation
