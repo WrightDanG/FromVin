@@ -39,7 +39,7 @@ def choose(request):
         wineValue = request.GET['wine_choice']
         print(wineValue)
         queryset = Product.objects.all()
-        filtered = queryset.filter(category=wineValue)
+        filtered = queryset.filter(tastingprofile=wineValue)
         if filtered:
             products = sample(list(filtered), 2)
         else:

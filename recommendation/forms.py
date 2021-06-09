@@ -16,12 +16,12 @@ WINE_CHOICES = [
 
 CHEESE_CHOICES = [
     ('0', 'I like my cheese...'),
-    ('1', 'Soft: Crumbly, Mellow, Light '),
-    ('2', 'Soft: Gooey, Creamy, Sweet-notes'),
-    ('3', 'Soft: Punchy, Rich and Strong'),
-    ('4', 'Hard: Subtle and a little sweet'),
-    ('5', 'Hard: Sharp, Flavoursome'),
-    ('6', 'Hard: The Smellier the better')
+    ('7', 'Soft: Crumbly, Mellow, Light '),
+    ('8', 'Soft: Gooey, Creamy, Sweet-notes'),
+    ('9', 'Soft: Punchy, Rich and Strong'),
+    ('10', 'Hard: Subtle and a little sweet'),
+    ('11', 'Hard: Sharp, Flavoursome'),
+    ('12', 'Hard: The Smellier the better')
 ]
 
 
