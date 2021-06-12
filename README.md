@@ -3,12 +3,20 @@ Find Wines and Cheeses to your taste.
 
 
 ## Site Owner Goal
+The site owner is looking to provide a platform for food lovers to purchase wine and cheese. 
 
+If users know what they are looking to purchase, they can do so. For those who do not, they can head to 'recommend', select the type of wine or cheese that they know they like and receive recommendations on what to buy as a pairing.
 
 
 ## User Stories
-
-
+A user will want to be able to do the following:
+- Browse wine and cheese products
+- Add wanted products to a basket
+- Order and pay for said products to a stated delivery address
+- Create a user account
+- Access previous orders through said user account
+- Find out information regarding cheese, wine
+- Find out information regarding cheese and wine pairings
 
 
 ## Site Layout
@@ -18,7 +26,9 @@ Find Wines and Cheeses to your taste.
 ## Design Decisions
 
 ### General Design
+As a preface to the aspects that are more bespoke on the site, it needs to be stated that i've leaned quite heavily on the boutique ado project. As the only full ecommerce solution on the course and an ideal example of how to put together a django ecommerce site, it seemed like a natural source of a basis. This was discussed with my stand-in mentor to confirm this would be the case, and was told that it was expected, but should be stated outright here.
 
+Otherwise, a fixed top navbar was selected so that a user can utilise the navigation even when midway down hundreds of products. On said navbar, the site has been split into it's shop, a homepage which acts as an informational guide, a recommendation page and a blog for more bespoke information from the site owners. (SPOTLIGHT ON SPECIFIC PRODUCTS?)
 
 
 ### Data Specific Design
