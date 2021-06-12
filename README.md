@@ -140,6 +140,7 @@ Note for future - code to disable form and test webhooks can be found in BA prof
 - Images resized for deployment using [Resizeimage.net](https://resizeimage.net/)
 - Addition of select form assistance using [GeeksforGeeks](https://www.geeksforgeeks.org/choicefield-django-forms/)
 - Assistance with getting a sample of Django data [Stackoverflow - lukeaus](https://stackoverflow.com/questions/22816704/django-get-a-random-object)
+- Guide for addition of a blog to the site [DjangoCentral](https://djangocentral.com/building-a-blog-application-with-django/)
 
 
 
