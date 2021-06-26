@@ -167,8 +167,6 @@ if 'DEVELOPMENT' not in os.environ:
 else:
     IMAGE_URL = '/media/'
 
-CLOUDINARY_URL = 'https://res.cloudinary.com/hytpjm4e2/image/upload/v1624727642/media/'
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
