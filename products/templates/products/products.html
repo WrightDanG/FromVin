@@ -68,7 +68,8 @@
                         {% else %}
                         <a href="{% url 'product_detail' product.id %}">
                             <!-- Add image not found image -->
-                            <img class="card-img-top img-fluid" src="{{ NOIMAGE_URL }}" alt="{{ product.name }}">
+                            <img class="card-img-top img-fluid" src="{{ image_url }}noimage.jpg"
+                                alt="{{ product.name }}">
                         </a>
                         {% endif %}
                         <div class="card-body pb-0">

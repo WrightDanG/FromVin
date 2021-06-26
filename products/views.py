@@ -5,6 +5,7 @@ from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm
 from django.contrib.auth.decorators import login_required
+from django.conf import settings
 
 # Create your views here.
 
@@ -59,6 +60,7 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'image_url': settings.IMAGE_URL
     }
 
     return render(request, 'products/products.html', context)

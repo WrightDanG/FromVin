@@ -163,9 +163,11 @@ if 'DEVELOPMENT' not in os.environ:
         'CLOUDINARY_URL': os.getenv('CLOUDINARY_URL', '')
     }
     DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-    NOIMAGE_URL = 'https://res.cloudinary.com/hytpjm4e2/image/upload/v1/media/noimage.jpg'
+    IMAGE_URL = 'https://res.cloudinary.com/hytpjm4e2/image/upload/v1624727642/media/'
 else:
-    NOIMAGE_URL = '/media/'
+    IMAGE_URL = '/media/'
+
+CLOUDINARY_URL = 'https://res.cloudinary.com/hytpjm4e2/image/upload/v1624727642/media/'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
