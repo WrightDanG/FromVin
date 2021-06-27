@@ -36,21 +36,67 @@ Otherwise, a fixed top navbar was selected so that a user can utilise the naviga
 
 #### Database Schema
 
+The following was made with Creately. The postgres database viewer on Heroku is unfortunately quite limited, so some estimates have been made as to the relationships between some of these tables. In addition, the social tables have been created, but wouldn't be utilised until additional work is made on the project.
 
+![database schema](https://user-images.githubusercontent.com/61311614/123555148-d1753200-d77b-11eb-840a-9ef8ffd979f2.png)
 
 
 ### Wireframes
 
 
-
 #### Desktop
 
+Home/Guide Page
+![desktop1](https://user-images.githubusercontent.com/61311614/123558441-29b52f80-d78e-11eb-8584-6b64d708e8f6.png)
+![desktop2](https://user-images.githubusercontent.com/61311614/123558442-2a4dc600-d78e-11eb-845e-315235a994cb.png)
+![desktop3](https://user-images.githubusercontent.com/61311614/123558443-2c178980-d78e-11eb-8769-5d19ade8b323.png)
+![desktop4](https://user-images.githubusercontent.com/61311614/123558447-2d48b680-d78e-11eb-8664-b032c44f8eaa.png)
+
+Recommendation Page
+
+![desktop5](https://user-images.githubusercontent.com/61311614/123558449-2e79e380-d78e-11eb-8316-25c880a52846.png)
+![desktop6](https://user-images.githubusercontent.com/61311614/123558450-2fab1080-d78e-11eb-8ea1-d91af7063a0e.png)
+![desktop7](https://user-images.githubusercontent.com/61311614/123558451-3174d400-d78e-11eb-8b95-6ad359c0781e.png)
+![desktop8](https://user-images.githubusercontent.com/61311614/123558452-333e9780-d78e-11eb-956e-08df59a339d0.png)
+![desktop9](https://user-images.githubusercontent.com/61311614/123558454-35a0f180-d78e-11eb-84d8-0f0e7f3077c3.png)
+
+Store Page
+
+![desktop10](https://user-images.githubusercontent.com/61311614/123558455-39cd0f00-d78e-11eb-8353-ddc01106858f.png)
+![desktop11](https://user-images.githubusercontent.com/61311614/123558456-3b96d280-d78e-11eb-825c-687b3f77ab3a.png)
+
+Checkout Page
+
+![desktop12](https://user-images.githubusercontent.com/61311614/123558457-3d609600-d78e-11eb-89dc-c665d5647f97.png)
+![desktop13](https://user-images.githubusercontent.com/61311614/123558460-3f2a5980-d78e-11eb-954b-b4515da2c9dd.png)
 
 
 
 
 #### Mobile
 
+Guide/Home Page
+
+![mobile1](https://user-images.githubusercontent.com/61311614/123558527-a516e100-d78e-11eb-844b-1263f3f4217a.png)
+![mobile2](https://user-images.githubusercontent.com/61311614/123558531-ac3def00-d78e-11eb-9f29-3187dea69aca.png)
+![mobile3](https://user-images.githubusercontent.com/61311614/123558532-acd68580-d78e-11eb-9e96-228c8621c71f.png)
+![mobile4](https://user-images.githubusercontent.com/61311614/123558534-ae07b280-d78e-11eb-8076-7e624311e7b5.png)
+
+Recommendation Page
+
+![mobile5](https://user-images.githubusercontent.com/61311614/123558537-aea04900-d78e-11eb-8525-1d8b6eeae1c7.png)
+![mobile6](https://user-images.githubusercontent.com/61311614/123558538-afd17600-d78e-11eb-9d0f-77ee505034ea.png)
+
+Store Page
+
+![mobile7](https://user-images.githubusercontent.com/61311614/123558540-b364fd00-d78e-11eb-984b-5efe92d5e04f.png)
+![mobile8](https://user-images.githubusercontent.com/61311614/123558543-b4962a00-d78e-11eb-9c1a-25fa8435b291.png)
+
+Checkout Page
+
+![mobile9](https://user-images.githubusercontent.com/61311614/123558544-b5c75700-d78e-11eb-8bff-1b5e68721f49.png)
+![mobile10](https://user-images.githubusercontent.com/61311614/123558546-b6f88400-d78e-11eb-8cec-323fee875906.png)
+![mobile11](https://user-images.githubusercontent.com/61311614/123558547-b8c24780-d78e-11eb-9b98-d3ff378f1841.png)
 
 
 
