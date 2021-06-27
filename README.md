@@ -128,17 +128,39 @@ Note for future - code to disable form and test webhooks can be found in BA prof
 
 ### Local Deployment
 
+Starting a project such as this using the chosen IDE, in this case Gitpod.io is quite simple.
+
+- Create a new workspace in Gitpod
+- Install django using 'pip3 install Django'
+- Start a new project using `django-admin startproject {enter site name here}`
+- From this point, apps can begin to be created as needed using `python3 manage.py startapp {enter app name here}`
+- A database is created by default, but any changes to models will require migrations. These can be prepared with `python3 manage.py makemigrations`, followed by `python3 manage.py migrate` once you have confirmed these to be correct. The `--plan` and `--dry-run` tags are advised to be used in confirming this (see Django [documentation](https://docs.djangoproject.com/en/3.2/ref/django-admin/) for more details).
+- Create a .gitignore file so that sensitive data (database, settings) is not stored publically on git.
+- Create a requirements.txt file, which lists the dependencies of the project. The command for this is `pip3 freeze > requirements.txt`
+- Create a Procfile (spelt exactly like this), which sets where the application should commence. For Django, it's usual to install a program by the name of 'Gunicorn' to assist with this. This is primarily used for live deployment, but is a good habit to get into. The command is `pip3 install gunicorn` and the Procfile content should be `web: gunicorn {insert project name}.wsgi`.
+
+From here, running the app via your IDE will start up a version of the application that can be viewed, and built upon. The command for this in Gitpod is `python3 manage.py runserver`.
+
+In this particular project, the local site cannot be found at a consistent web address as it is based on the workspace instance, which for gitpod is a sequence of random words.
 
 
 ### Cloning this exact project
 
+- Navigate to the following GitHub Repo - https://github.com/WrightDanG/FromVin
+- Click the dropdown that states 'Code':
+![image](https://user-images.githubusercontent.com/61311614/109667885-839f4300-7b68-11eb-9b2e-a61242788e79.png)
+- You should have several options to open/download the code. Personally I had 'Open with Visual Studio', 'Open with GitHub Desktop', 'Download ZIP'
+- The first two options will launch the respective clients (if installed) where you can trigger a clone operation.
+- The last option allows you to copy+paste/drag+drop physical copies of the code into your respective IDE. You will need to extract the data first most likely. This requires more manual work but is an equally valid way to clone the project for local use. 
 
+You may note that on the above image, there is a 'GitPod' option. This is due to the GitPod extension installed on my browser. If the user were to also do this (tested working on Chrome and Firefox), log into their respective gitpod account and click this button, they would be able to launch an instance of this project also.
 
 ### Deployment via Heroku
 
 Getting Heroku to deploy a version of this project is incredibly simple. The below steps can be followed:
 
 - Ensure that the project is linked to a GitHub repository.
+- Confirm that the Procfile has been successfully created per the 'local' instructions above. Heroku will require this for a live deployment.
 - Create a Heroku Login.
 - Create a Heroku application - it must have a unique name.
 - Install heroku into your project via command line (pip3 install django-heroku)
