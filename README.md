@@ -116,12 +116,13 @@ Note for future - code to disable form and test webhooks can be found in BA prof
 
 
 ## Known issues
-
+- I had a little trouble with wrapping my head around static files and django. I made a little workaround for images that were not uploaded via admin, such as the flavour wheel. This does not represent best practice amongst the way it was handled
 
 
 
 ## Future improvements
-
+- Make tasting profile less of a magic number
+- Thoroughly research the pairings, they currently are arbitary and could be more tailored. 
 
 ## Deployment Procedure
 
@@ -135,13 +136,83 @@ Note for future - code to disable form and test webhooks can be found in BA prof
 
 ### Deployment via Heroku
 
+Getting Heroku to deploy a version of this project is incredibly simple. The below steps can be followed:
+
+- Ensure that the project is linked to a GitHub repository.
+- Create a Heroku Login.
+- Create a Heroku application - it must have a unique name.
+- Install heroku into your project via command line (pip3 install django-heroku)
+- Under 'Deploy', click 'Connect to GitHub' and link it to the repository.
+- Under 'Settings', 'Reveal Config Vars' and add your IP, Port, Secret Key and stripe details.
+- Back under 'Deploy', 'Enable Automatic Deploys' can be now be selected so the project will deploy every time there is a new GitHub commit.
+- Ensure that the new url is added to the 'ALLOWED_HOSTS' in settings.py
+- From here it's as simple as clicking 'Open App' for a instance of the application to run.
+
+For this particular project, the site can be found at: https://fromvin.herokuapp.com/
+
+The local sqlite database will not be sufficient for deployment purposes, so a Heroku Postgres database can be added via Heroku addons. Heroku will handle the environment details for this, but the data will need to be exported from sqlite, and imported into Postgres. 
+
+The following procedure is taken from Code Institute on how to do this:
+
+- Make sure your manage.py file is connected to your mysql database
+- Use this command to backup your current database and load it into a db.json file:
+    ./manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json
+- Connect your manage.py file to your postgres database
+- Then use this command to load your data from the db.json file into postgres:
+    ./manage.py loaddata db.json
+
+
+This then gets a little more complicated due to how Django deals with static files. Whilst they are served correctly by Gitpod locally, when it comes to a live deployment, additional infrastructure is required. 
+
+Code Institute recommends using Amazon AWS to serve static files, and whilst these are a known entity with a robust infrastructure, personally I decided not to go with them.
+
+This was for two reasons. One was that I had followed the boutique ado project closely up until that point and wished to try something new for experience. The other was that I had read that AWS had been charging people without warning for going over a media cap and wished to avoid this possibility. 
+
+I chose [Cloudinary](https://cloudinary.com/) as a provider for media files, primarily due to their integration with Heroku and reasonably well-reviewed status. [Whitenoise](http://whitenoise.evans.io/en/stable/) was the chosen application by many to go hand in hand with this to serve the remaining static files (CSS/ Javascript).
+
+The following steps were taken:
+
+- Navigate to 'Add-ons' once within your heroku project, on the heroku portal
+- Search for 'Cloudinary'
+- Click install, and enter heroku payment details if required. Choose the free version however, the payment details should not be needed to be used. 
+- Install both cloudinary and whitenoise into the project via console command (pip3 install cloudinary django-cloudinary-storage whitenoise)
+- Ensure the requirements are added to requirements.txt (pip3 freeze > requirements.txt)
+- Ensure they are added to installed apps in settings.py
+- Add the following to middleware to support Whitenoise 'whitenoise.middleware.WhiteNoiseMiddleware'
+- The cloudinary portal will have a url with the needed keys. This url can be added to heroku settings and accessed via settings.py. 
+Personally, I have been using dj_database for database settings and have used the following to get the postgres database to link up: 'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+
+Static files locations can be set in settings.py - the code from this project is as follows:
+
+# Heroku static collection settings
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+
+# Extra places for collectstatic to find static files.
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# Media files served in live via Cloudinary
+
+CLOUDINARY_STORAGE = {
+    'CLOUDINARY_URL': os.getenv('CLOUDINARY_URL', '')
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+IMAGE_URL = # Custom cloudinary url
+
+Generally speaking that additional IMAGE_URL setting should not be necessary, but I personally had a little trouble with serving some specific media files, so used this as a solution. The other settings allow cloudinary to serve media files and whitenoise to serve the other static files and barring any issues, the live site should now match the local site.
+
+
 
 ## User story walkthroughs
 
 
 
 ## Conclusion
-
+ On a personal note, this course has been a superb experience. The intention was to utilise it to kickstart a career in software development and it has been successful in this regard already. For this reason, amongst others, I have had much less time available than I would want to do this final project justice. The idea is sound, the execution would have been well served by another couple of weeks of clear time to work on it. 
 
 
 ## Attribution
@@ -151,6 +222,8 @@ Note for future - code to disable form and test webhooks can be found in BA prof
 - Addition of select form assistance using [GeeksforGeeks](https://www.geeksforgeeks.org/choicefield-django-forms/)
 - Assistance with getting a sample of Django data [Stackoverflow - lukeaus](https://stackoverflow.com/questions/22816704/django-get-a-random-object)
 - Guide for addition of a blog to the site [DjangoCentral](https://djangocentral.com/building-a-blog-application-with-django/)
+- Workaround for images that do not fall under the main static images found at [StackOverflow - prariedogg](https://stackoverflow.com/questions/433162/can-i-access-constants-in-settings-py-from-templates-in-django)
+- Assistance with ideas for tasting notes from [Virgin Wines](https://www.virginwines.co.uk/hub/wine-guide/wine-basics/how-to-taste-wine/)
 
 
 
@@ -158,6 +231,7 @@ Note for future - code to disable form and test webhooks can be found in BA prof
 
 #### General
 - noimage.jpg - [Wikimedia commons](https://commons.wikimedia.org/wiki/File:No_Image_Available.jpg) - Creative Commons Licence
+- wine_wheel.jpg - [Wikimedia commons](https://upload.wikimedia.org/wikipedia/commons/a/a1/Wine_Aroma_Wheel.jpg) - Creative Commons Licence
 
 #### Red Wines
 - merlot1 image - [Wikimedia commons](https://commons.wikimedia.org/wiki/File:Estepa_Merlot_Red_Wine_Series_(4532104130).jpg) - Creative Commons Licence
