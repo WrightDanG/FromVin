@@ -17,7 +17,13 @@
     {% block corecss %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Favicon Start -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ image_url }}apple-touch-icon.png">
+    <link rel="android-chrome" sizes="192x192" href="{{ image_url }}android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ image_url }}favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ image_url }}favicon-16x16.png">
+    <!-- Favicon End -->
     {% endblock %}
 
     {% block extra_css %}
@@ -28,10 +34,10 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-        </script>
+    </script>
     <!--Importing fontawesome icons -->
     <script src="https://kit.fontawesome.com/5b83da489c.js" crossorigin="anonymous"></script>
     <!-- Stripe -->
