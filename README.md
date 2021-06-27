@@ -21,6 +21,24 @@ A user will want to be able to do the following:
 
 ## Site Layout
 
+The layout isn't exactly as I was originally picturing when making the wireframes for this site. Unfortunately time constraints have shifted the scope a little. The guide was originally due to have additional content, with some storyboard style images of wine tasting. As it stands, it has a minor introduction into what you can find at FromVin, followed by a brief overview of the main points of tasting. I also located a wonderful royalty-free flavours image which deserved pride of place on the site. It does still serve the main purpose of being a guide, both to FromVin, and to Wine as something to be appreciated and explored. 
+
+Users are guided to additional information should they want it on the blog section of the site. 
+
+
+Recommendation
+
+
+Store
+
+
+basket
+
+
+Checkout
+
+
+Account/Profile
 
 
 ## Design Decisions
@@ -163,6 +181,7 @@ Note for future - code to disable form and test webhooks can be found in BA prof
 
 ## Known issues
 - I had a little trouble with wrapping my head around static files and django. I made a little workaround for images that were not uploaded via admin, such as the flavour wheel. This does not represent best practice amongst the way it was handled
+- As such, the favicon will only show on pages where the image link has been passed into the context. This does not feel like best practice and perhaps a custom context processor for this would have been much better to make it available sitewide. Update: use templatetags?? 
 
 
 
@@ -284,6 +303,7 @@ Generally speaking that additional IMAGE_URL setting should not be necessary, bu
 
 
 ## Attribution
+- External links to wine tasting guides found at the [WineFolly](https://winefolly.com/) resource. 
 - Assistance with adding django messages found at [Ordinarycoders.com](https://www.ordinarycoders.com/blog/article/django-messages-framework)
 - Assistance with deploying static files with heroku found at [dev.to](https://dev.to/developerroad/tutorial-deploying-a-django-app-on-heroku-4k6o) 
 - Images resized for deployment using [Resizeimage.net](https://resizeimage.net/)
