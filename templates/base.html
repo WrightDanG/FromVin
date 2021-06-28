@@ -59,7 +59,7 @@
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'products' %}">
-                    <div class="input-group w-50">
+                    <div class="input-group w-50 d-sm-none d-none d-md-flex">
                         <input class="form-control border border-black" type="text" name="q" placeholder="Search">
                         <div class="input-group-append">
                             <button class="form-control btn border border-black" type="submit">
@@ -71,30 +71,25 @@
                     </div>
                 </form>
             </div>
-            <!-- <div>
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#">Guide</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Recommend</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-                </ul>
-            </div> -->
+
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                    <li class="list-inline-item">
-                        <a class="text-black nav-link" href="{% url 'guide' %}">
+                    <li class="list-inline-item dropdown">
+                        <a class="text-black nav-link" href="#" id="content-options" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div><i class="fas fa-book fa-lg"></i></div>
-                                <p class="my-0">Guide</p>
+                                <div><i class="fas fa-book-open fa-lg"></i></div>
+                                <p class="my-0">Content</p>
                             </div>
                         </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="text-black nav-link" href="{% url 'recommendation' %}">
-                            <div class="text-center">
-                                <div><i class="fas fa-question-circle fa-lg"></i></div>
-                                <p class="my-0">Recommend</p>
-                            </div>
-                        </a>
+                        <div class="dropdown-menu border-0" aria-labelledby="content-options">
+                            <a href="{% url 'guide' %}" class="dropdown-item"><i class="fas fa-book fa-lg"></i>
+                                Guide</a>
+                            <a href="{% url 'recommendation' %}" class="dropdown-item"><i
+                                    class="fas fa-question-circle fa-lg"></i> Recommend</a>
+                            <a href="{% url 'blog' %}" class="dropdown-item"><i
+                                    class="fas fa-clipboard-check fa-lg"></i> Blog</a>
+                        </div>
                     </li>
                     <li class="list-inline-item">
                         <a class="text-black nav-link" href="{% url 'products' %}">
@@ -105,8 +100,8 @@
                         </a>
                     </li>
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                        <a class="text-black nav-link d-sm-none d-none d-md-block" href="#" id="user-options"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
                                 <p class="my-0">My Account</p>
@@ -126,7 +121,7 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link d-sm-none d-none d-md-block"
                             href="{% url 'view_bag' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
