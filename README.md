@@ -183,12 +183,14 @@ Note for future - code to disable form and test webhooks can be found in BA prof
 - I had a little trouble with wrapping my head around static files and django. I made a little workaround for images that were not uploaded via admin, such as the flavour wheel. This does not represent best practice amongst the way it was handled
 - As such, the favicon will only show on pages where the image link has been passed into the context. This does not feel like best practice and perhaps a custom context processor for this would have been much better to make it available sitewide. Update: Information found in the Django documentation suggested that Django supports the MEDIA_URL setting sitewide, so images were updated to utilise this however it caused complications with the product images. A custom context processor was then added to address this. 
 - On loading images to Cloudinary, they did not keep their original names, which means they are not found locally. Renaming the local versions, or the Cloudinary hosted versions would fix this. 
+- Despite having the site set on admin as 'FromVin', the password emails still appear to use 'example.com'
 
 
 
 ## Future improvements
 - Make tasting profile less of a magic number
 - Thoroughly research the pairings, they currently are arbitary and could be more tailored. 
+- Make amendments to secondary action buttons. From a UX perspective, whilst they may look good, my concern is that a user may click the wrong one by accident. 
 
 ## Deployment Procedure
 
