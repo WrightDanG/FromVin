@@ -164,8 +164,13 @@ if 'DEVELOPMENT' not in os.environ:
     }
     DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
     IMAGE_URL = 'https://res.cloudinary.com/hytpjm4e2/image/upload/v1624727642/media/'
+    MEDIA_URL = 'https://res.cloudinary.com/hytpjm4e2/image/upload/v1624727642/media/'
 else:
     IMAGE_URL = '/media/'
+    MEDIA_URL = '/media/'
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -213,9 +218,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 FREE_DELIVERY_THRESHOLD = 75

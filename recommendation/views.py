@@ -1,6 +1,7 @@
 from django.views.generic.edit import CreateView
 from django.shortcuts import render
 from random import sample
+from django.conf import settings
 
 from products.models import Product, Category, TastingProfile
 
@@ -19,7 +20,7 @@ def recommendation(request):
     #products = products.filter(category=2)
     #categories = Category.objects.filter(name__in="red_wine")
 
-    context = {}
+    context = {'image_url': settings.IMAGE_URL}
     context['wineform'] = WineForm()
     context['cheeseform'] = CheeseForm()
     # if 'wine_choice' in request.GET:
