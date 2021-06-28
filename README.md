@@ -182,6 +182,7 @@ Note for future - code to disable form and test webhooks can be found in BA prof
 ## Known issues
 - I had a little trouble with wrapping my head around static files and django. I made a little workaround for images that were not uploaded via admin, such as the flavour wheel. This does not represent best practice amongst the way it was handled
 - As such, the favicon will only show on pages where the image link has been passed into the context. This does not feel like best practice and perhaps a custom context processor for this would have been much better to make it available sitewide. Update: Information found here suggested that Django supports the MEDIA_URL setting sitewide, so images were updated to utilise this.
+- On loading images to Cloudinary, they did not keep their original names, which means they are not found locally. Renaming the local versions, or the Cloudinary hosted versions would fix this. 
 
 
 

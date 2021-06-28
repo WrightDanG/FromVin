@@ -94,6 +94,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'bag.contexts.bag_contents',
                 'django.template.context_processors.media',
+                'guide.context_processors.image_url',
             ],
             # Ensure tags are available project wide
             'builtins': [
