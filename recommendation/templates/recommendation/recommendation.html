@@ -10,28 +10,35 @@
 {% endblock %}
 
 {% block content %}
-
-
-<div class="container">
+<div class="container mb-2">
     <div class="row">
         <div class="col">
-            <hr>
-            <h2 class="logo-font mb-4">Recommend Me</h2>
-            <hr>
+            <h2 class="title-text mb-4 text-center">Recommend Me</h2>
+            <hr class="block-divider block-divider-bottom-margin">
         </div>
     </div>
 
 
-    <form action="{% url 'choose' %}" method="GET">
-        <!-- {% csrf_token %} -->
-        {{ wineform | crispy }}
-        <input type="submit" value="Create" />
-    </form>
 
-    <form action="{% url 'choose' %}" method="GET">
-        {{ cheeseform | crispy }}
-        <input type="submit" value="Create" />
-    </form>
+    <div class="row text-center">
+        <form class="col-md-6" action="{% url 'choose' %}" method="GET">
+            <div class="">
+                {{ wineform | crispy }}
+                <input type="submit" value="Create" />
+            </div>
+        </form>
+        <form class="col-md-6" action="{% url 'choose' %}" method="GET">
+            <div class="">
+                {{ cheeseform | crispy }}
+                <input type="submit" value="Create" />
+            </div>
+        </form>
+    </div>
+
+
+    <!-- <form action="{% url 'choose' %}" method="GET">
+        
+    </form> -->
 
 </div>
 
