@@ -231,7 +231,4 @@ input[name='q']::placeholder {
         height: calc(100vh - 150px);
     }
 
-    .alert {
-        margin-top: 200px;
-    }
 }
