@@ -6,5 +6,5 @@ from django.conf import settings
 
 def index(request):
     """ Returns the index page for the guide. """
-    context = {'image_url': settings.IMAGE_URL}
+    context = {}
     return render(request, 'guide/index.html', context)

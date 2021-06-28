@@ -20,7 +20,7 @@ def recommendation(request):
     #products = products.filter(category=2)
     #categories = Category.objects.filter(name__in="red_wine")
 
-    context = {'image_url': settings.IMAGE_URL}
+    context = {}
     context['wineform'] = WineForm()
     context['cheeseform'] = CheeseForm()
     # if 'wine_choice' in request.GET:

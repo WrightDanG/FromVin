@@ -3,7 +3,7 @@ from .models import Post
 
 
 class PostList(generic.ListView):
-    # Ensure only published blogs are shown
+    # Ensure only published blogs are shown, latest first
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'blog/blog.html'
 
