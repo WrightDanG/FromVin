@@ -20,8 +20,9 @@
             <div class="dropdown-menu border-0" aria-labelledby="wines-link">
                 <a href="{% url 'products' %}?category=red_wine" class="dropdown-item">Red Wines</a>
                 <a href="{% url 'products' %}?category=white_wine" class="dropdown-item">White Wines</a>
-                <a href="{% url 'products' %}?category=port" class="dropdown-item">Ports</a>
-                <a href="{% url 'products' %}?category=red_wine,white_wine,port" class="dropdown-item">All Wines</a>
+                <a href="{% url 'products' %}?category=dessert_wine" class="dropdown-item">Dessert Wines</a>
+                <a href="{% url 'products' %}?category=red_wine,white_wine,dessert_wine" class="dropdown-item">All
+                    Wines</a>
             </div>
         </li>
 
@@ -40,13 +41,10 @@
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black" href="#" id="additionals-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Add-ons
+                Accompaniments
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="additionals-link">
-                <a href="" class="dropdown-item">Breads &amp; Crackers</a>
-                <a href="" class="dropdown-item">Chutneys</a>
-                <a href="" class="dropdown-item">Accessories</a>
-                <a href="" class="dropdown-item">All Add-ons</a>
+                <a href="{% url 'products' %}?category=extras" class="dropdown-item">All Accompaniments</a>
             </div>
         </li>
     </ul>
