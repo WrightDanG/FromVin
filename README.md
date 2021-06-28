@@ -188,6 +188,7 @@ Note for future - code to disable form and test webhooks can be found in BA prof
 
 
 ## Future improvements
+- A validation message should be present on the Delete option for products. Even better would be an 'Undo' option, as this will allow for repairing of mistakes and less impactful mass-deletions, should they be necessary through the GUI. 
 - Make tasting profile less of a magic number
 - Thoroughly research the pairings, they currently are arbitary and could be more tailored. 
 - Make amendments to secondary action buttons. From a UX perspective, whilst they may look good, my concern is that a user may click the wrong one by accident. 
@@ -417,30 +418,99 @@ The below is just to show that stripe successfully received and processed the in
 The user is then sent a custom email detailing their order. Going forward, this would utilise additional styling to reflect the company brand. 
 
 ![Screenshot_32](https://user-images.githubusercontent.com/61311614/123704445-8c293100-d85d-11eb-8935-759afb4d7400.png)
+
+On now visiting the profile, the user is presented with this saved delivery information, along with a link to the order that was just made.
+
 ![Screenshot_33](https://user-images.githubusercontent.com/61311614/123704446-8c293100-d85d-11eb-890e-9b944564b269.png)
+
+The order details are reflected here, with information that the order is in the past. 
+
 ![Screenshot_34](https://user-images.githubusercontent.com/61311614/123704448-8c293100-d85d-11eb-8a30-7f828b11a2c8.png)
+
+Should additional products be desired, if the user has a specific type or product in mind then they are able to utilise the searchbox on the page from wherever they are. 
+
 ![Screenshot_35](https://user-images.githubusercontent.com/61311614/123704450-8cc1c780-d85d-11eb-954c-9358e5ebd802.png)
+
+This then collapses to a more compact version on mobile view, catering to as many device types and customers as possible.
+
 ![Screenshot_36](https://user-images.githubusercontent.com/61311614/123704453-8d5a5e00-d85d-11eb-8814-1862f14ba61d.png)
+
+The session can be terminated using the 'Sign Out' option, under 'My Account'.
+
 ![Screenshot_37](https://user-images.githubusercontent.com/61311614/123704455-8d5a5e00-d85d-11eb-9071-4e881b7650fb.png)
+
+The user is again presented with a successful confirmation message. 
+
 ![Screenshot_38](https://user-images.githubusercontent.com/61311614/123704458-8d5a5e00-d85d-11eb-9ade-a97847ad4f09.png)
+
+Should a user forget their password, Django has excellent functionality for this and the user is able to select that they have forgotten their password when they go to sign in.
+
 ![Screenshot_39](https://user-images.githubusercontent.com/61311614/123704459-8df2f480-d85d-11eb-93bf-5c3619533d34.png)
+
+They simply enter their email address as a first step.
+
 ![Screenshot_40](https://user-images.githubusercontent.com/61311614/123704463-8df2f480-d85d-11eb-88c2-c49b371a5309.png)
+
+Receive confirmation and direction that they should check their email.
+
 ![Screenshot_41](https://user-images.githubusercontent.com/61311614/123704465-8df2f480-d85d-11eb-9228-fa956ca9af45.png)
+
+Are provided with a simple link to go back to reset their password.
+
 ![Screenshot_42](https://user-images.githubusercontent.com/61311614/123704469-8e8b8b00-d85d-11eb-9939-8da92e4b4ac0.png)
+
+If they should utilise the link more than once, Django has functionality pre-built for this also. The user will get the below and are able to try again.
+
 ![Screenshot_43](https://user-images.githubusercontent.com/61311614/123704472-8e8b8b00-d85d-11eb-8d2e-c3e8aed9a177.png)
+
+On success however, the user is prompted to enter a new password, and confirm it. These are required to match.
+
 ![Screenshot_44](https://user-images.githubusercontent.com/61311614/123704474-8f242180-d85d-11eb-9f50-328544f97a6a.png)
+
+Once again, feedback is presented in a pleasant way. 
+
 ![Screenshot_45](https://user-images.githubusercontent.com/61311614/123704475-8f242180-d85d-11eb-9e69-4e30b1253fe5.png)
+
+Should that user be mamrked as an admin, there is additional functionality available. For a start there is a 'Product Management' section that is unavailable to users without appropriate permissions.
+
 ![Screenshot_46](https://user-images.githubusercontent.com/61311614/123706795-a7e20680-d860-11eb-9da2-84b6cc257939.png)
+
+Here, an admin user is able to create a product entry that, once submitted, will be added to the database. 
+
 ![Screenshot_47](https://user-images.githubusercontent.com/61311614/123706820-af091480-d860-11eb-9c47-c083f18e48ca.png)
+
+When browsing products, they are also able to Edit, or Delete products. 
+
 ![Screenshot_48](https://user-images.githubusercontent.com/61311614/123706821-af091480-d860-11eb-85e8-574351333452.png)
+
+Edit will take them to a similar page to 'Create', where the current details are populated, and can be amended. 
+
 ![Screenshot_49](https://user-images.githubusercontent.com/61311614/123706824-b03a4180-d860-11eb-8047-43419a38ef5a.png)
+
+For this, test products have been added.
+
 ![Screenshot_50](https://user-images.githubusercontent.com/61311614/123706826-b0d2d800-d860-11eb-9dfa-0355202325cc.png)
+
+The admin user is provided feedback that their deletion was successful, and the entry is removed from the database. 
+
 ![Screenshot_51](https://user-images.githubusercontent.com/61311614/123706831-b16b6e80-d860-11eb-8307-7dda407da28f.png)
+
+One of the wonderful aspects of Django is that the admin users have much, much more scope within the built-in admin backend. Here they can control almost every aspect of the site. The majority here is quite standard for an e-commerce site, but tasting profiles and blogs are site-specific. There presently isn't much to the tasting profiles but adding a new blog entry is incredibly simple via this admin backend.
+
 ![Screenshot_52](https://user-images.githubusercontent.com/61311614/123706834-b2040500-d860-11eb-8529-db99e26d3780.png)
+
+On clicking into Blogs, the admin can view what and when articles were created, along with whether they are live or not.
+
 ![Screenshot_53](https://user-images.githubusercontent.com/61311614/123706835-b2040500-d860-11eb-9ce1-3f6a734f06de.png)
+
+Adding or changing then becomes as simple as inserting your content and clicking 'Save'.
+
 ![Screenshot_54](https://user-images.githubusercontent.com/61311614/123706836-b29c9b80-d860-11eb-8d77-6b9badf55410.png)
 
 ## Conclusion
+
+In my opinion, the journey...
+
  On a personal note, this course has been a superb experience. The intention was to utilise it to kickstart a career in software development and it has been successful in this regard already. For this reason, amongst others, I have had much less time available than I would want to do this final project justice. The idea is sound, the execution would have been well served by another couple of weeks of clear time to work on it. 
 
 
