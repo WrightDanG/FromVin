@@ -38,10 +38,10 @@
 
 <hr class="block-divider block-divider-bottom-margin">
 
-<div class="row">
+<div class="row text-center mt-5">
     {% for product in products %}
     <div class="col-md-6">
-        <div class="card h-100 w-50 mx-auto">
+        <div class="card h-100 w-50 mx-auto border-0">
             {% if product.image %}
             <a href="{% url 'product_detail' product.id %}">
                 <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -55,10 +55,10 @@
             <div class="card-body pb-0">
                 <p class="mb-0">{{ product.name }}</p>
             </div>
-            <div class="card-footer bg-white pt-0 border-0 text-left">
+            <div class="card-footer bg-white pt-0 border-0">
                 <div class="row">
                     <div class="col">
-                        <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                        <p class="lead mb-0 font-weight-bold">£{{ product.price }}</p>
                         {% if product.category %}
                         <p class="small mt-1 mb-0">
                             <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
@@ -77,26 +77,7 @@
             </div>
         </div>
     </div>
-    {% if forloop.counter|divisibleby:1 %}
-    <div class="col-12 d-sm-none mb-5">
-        <hr>
-    </div>
-    {% endif %}
-    {% if forloop.counter|divisibleby:2 %}
-    <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-        <hr>
-    </div>
-    {% endif %}
-    {% if forloop.counter|divisibleby:3 %}
-    <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-        <hr>
-    </div>
-    {% endif %}
-    {% if forloop.counter|divisibleby:4 %}
-    <div class="col-12 d-none d-xl-block mb-5">
-        <hr>
-    </div>
-    {% endif %}
     {% endfor %}
+    <hr class="block-divider block-divider-bottom-margin">
 </div>
 {% endblock %}
