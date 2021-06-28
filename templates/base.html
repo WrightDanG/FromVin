@@ -103,7 +103,7 @@
                         <a class="text-black nav-link d-sm-none d-none d-md-block" href="#" id="user-options"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
+                                <div><i class="fas fa-id-card fa-lg"></i></div>
                                 <p class="my-0">My Account</p>
                             </div>
                         </a>
@@ -124,7 +124,7 @@
                         <a class="{% if grand_total %}basket-icon text-info{% else %}text-black{% endif %} nav-link d-sm-none d-none d-md-block"
                             href="{% url 'view_bag' %}">
                             <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                <div><i class="fas fa-shopping-basket fa-lg"></i></div>
                                 <p class="my-0">
                                     {% if grand_total %}
                                     £{{ grand_total|floatformat:2 }}

@@ -21,24 +21,26 @@ A user will want to be able to do the following:
 
 ## Site Layout
 
+### Guide
+
 The layout isn't exactly as I was originally picturing when making the wireframes for this site. Unfortunately time constraints have shifted the scope a little. The guide was originally due to have additional content, with some storyboard style images of wine tasting. As it stands, it has a minor introduction into what you can find at FromVin, followed by a brief overview of the main points of tasting. I also located a wonderful royalty-free flavours image which deserved pride of place on the site. It does still serve the main purpose of being a guide, both to FromVin, and to Wine as something to be appreciated and explored. 
 
 Users are guided to additional information should they want it on the blog section of the site. 
 
 
-Recommendation
+### Recommendation
 
+Going forward there are some excellent things that can be done with the recommendation idea in my opinion. Currently the functionality stands at a straightforward process which allows the user to take broad tastes that they know they like, and translate that into a FromVin product that has been matched to it. Future expansion to this would allow different flavours to be picked and combined with the closest match product-wise being returned. This would require complex attribute mapping and a significantly greater number of products, but would be an interesting challenge. The current idea is much simpler but is an excellent start point in my opinion, and adds value to being more than just an online store.
 
-Store
+### Store
 
+I've covered this later in the Readme, but due to this being my only experience with something so large as an e-commerce site, i've leaned quite heavily on the boutique ado project for the store functionality. Hopefully this doesn't detract too much from the fact that the elements are wonderfully fit for purpose. User information storage, stripe implementation and excellent user feedback all comes together to ensure that any user wishing to purchase an item from this store, has as few barriers as possible to do so. 
 
-basket
+The items are presented and filtered logically for the user, and they can amend this themselves also. Adding products is simple and feedback is given all along the way. 
 
+### Account/Profile
 
-Checkout
-
-
-Account/Profile
+Credit has to be given here to the well-roundedness of the Django application. From initial installation alone, the breadth of user-centric control via the built in admin makes dealing with an often complex back-end to a project, relatively simple. 
 
 
 ## Design Decisions
@@ -46,7 +48,13 @@ Account/Profile
 ### General Design
 As a preface to the aspects that are more bespoke on the site, it needs to be stated that i've leaned quite heavily on the boutique ado project. As the only full ecommerce solution on the course and an ideal example of how to put together a django ecommerce site, it seemed like a natural source of a basis. This was discussed with my stand-in mentor to confirm this would be the case, and was told that it was expected, but should be stated outright here.
 
-Otherwise, a fixed top navbar was selected so that a user can utilise the navigation even when midway down hundreds of products. On said navbar, the site has been split into it's shop, a homepage which acts as an informational guide, a recommendation page and a blog for more bespoke information from the site owners. (SPOTLIGHT ON SPECIFIC PRODUCTS?)
+Otherwise, a fixed top navbar was selected so that a user can utilise the navigation even when midway down hundreds of products. On said navbar, the site has been split into it's shop, a homepage which acts as an informational guide, a recommendation page and a blog for more bespoke information from the site owners.
+
+The colour style of the site was chosen to reflect the products that it showcases, along with hopefully coming across as professional but not ostentatious. 
+
+As mentioned above, the hope is that the recommendation aspect of the site can expand over time. I feel this is what gives a little extra to the site as it gives direction to customers who may not know quite as much about the products as others. 
+
+The blog can be a powerful way to communicate with the users. Being able to present new information in a consistent manner was the reason for it's inclusion, and whilst most of the current information is just a sample - the potential of it speaks to it's inclusion. 
 
 
 ### Data Specific Design
@@ -129,6 +137,8 @@ Checkout Page
 - Mockplus Classic - Used for wireframes of the project - possibly the best free option so far in my opinion.
 - Heroku - for deploying and hosting the application.  
 - Creately - used to document the database schema.
+- Cloudinary - utilised to serve media files on the deployed site.
+- Whitenoise - used to serve static files on the deployed site. 
 
 
 ## Testing
