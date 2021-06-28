@@ -13,6 +13,10 @@ body {
 
 /* Logo */
 
+.title-text {
+    margin-top: 25px;
+}
+
 .navbar-brand {
     font-size: 24pt;
     color: #423e3f;
@@ -27,6 +31,20 @@ body {
     max-height: 416px;
     /* height of profile form + submit button */
     overflow-y: auto;
+}
+
+.wine-wheel-image {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.subtitle-text {
+    font-size: 20pt;
+}
+
+.details-icon {
+    font-size: 15pt;
+    color: #82261f;
 }
 
 /* ------------------------------------------------------------------------------- Fonts */
@@ -71,6 +89,24 @@ body {
 
 .alert {
     /* margin-top: 20px; */
+}
+
+/* --------------------------------------------- Horizontal Rules */
+
+/* Creates excellent division between different elements */
+.block-divider {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 1px;
+    width: 30%;
+}
+
+/* Ensure that the below content doesn't intrude into the dividers space */
+.block-divider-bottom-margin {
+    margin-bottom: 20px;
 }
 
 /* ----------------------------------------------------------------------------------------------- Loading */

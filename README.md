@@ -181,7 +181,7 @@ Note for future - code to disable form and test webhooks can be found in BA prof
 
 ## Known issues
 - I had a little trouble with wrapping my head around static files and django. I made a little workaround for images that were not uploaded via admin, such as the flavour wheel. This does not represent best practice amongst the way it was handled
-- As such, the favicon will only show on pages where the image link has been passed into the context. This does not feel like best practice and perhaps a custom context processor for this would have been much better to make it available sitewide. Update: Information found here suggested that Django supports the MEDIA_URL setting sitewide, so images were updated to utilise this.
+- As such, the favicon will only show on pages where the image link has been passed into the context. This does not feel like best practice and perhaps a custom context processor for this would have been much better to make it available sitewide. Update: Information found in the Django documentation suggested that Django supports the MEDIA_URL setting sitewide, so images were updated to utilise this however it caused complications with the product images. A custom context processor was then added to address this. 
 - On loading images to Cloudinary, they did not keep their original names, which means they are not found locally. Renaming the local versions, or the Cloudinary hosted versions would fix this. 
 
 
@@ -313,6 +313,7 @@ Generally speaking that additional IMAGE_URL setting should not be necessary, bu
 - Guide for addition of a blog to the site [DjangoCentral](https://djangocentral.com/building-a-blog-application-with-django/)
 - Workaround for images that do not fall under the main static images found at [StackOverflow - prariedogg](https://stackoverflow.com/questions/433162/can-i-access-constants-in-settings-py-from-templates-in-django)
 - Assistance with ideas for tasting notes from [Virgin Wines](https://www.virginwines.co.uk/hub/wine-guide/wine-basics/how-to-taste-wine/)
+- Information on custom context processors located here [stackoverflow - bchhun](https://stackoverflow.com/questions/433162/can-i-access-constants-in-settings-py-from-templates-in-django)
 
 
 
@@ -321,6 +322,7 @@ Generally speaking that additional IMAGE_URL setting should not be necessary, bu
 #### General
 - noimage.jpg - [Wikimedia commons](https://commons.wikimedia.org/wiki/File:No_Image_Available.jpg) - Creative Commons Licence
 - wine_wheel.jpg - [Wikimedia commons](https://upload.wikimedia.org/wikipedia/commons/a/a1/Wine_Aroma_Wheel.jpg) - Creative Commons Licence
+- cheers.jpg - [photostockeditor](https://photostockeditor.com/image/wine-group-of-people-holding-footed-glasses-glass-19025) - Creative Commons Licence
 
 #### Red Wines
 - merlot1 image - [Wikimedia commons](https://commons.wikimedia.org/wiki/File:Estepa_Merlot_Red_Wine_Series_(4532104130).jpg) - Creative Commons Licence

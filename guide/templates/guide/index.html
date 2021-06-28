@@ -13,36 +13,36 @@
 <div class="container mb-2">
     <div class="row">
         <div class="col">
-            <hr>
-            <h2 class="logo-font mb-4"> Welcome to FromVin</h2>
-            <hr>
+            <h1 class="title-text mb-4 text-center"> Welcome to FromVin</h1>
+            <hr class="block-divider block-divider-bottom-margin">
         </div>
     </div>
 
     <div class="row">
         <div class="col">
-            <hr>
-            <h3 class="logo-font mb-4"> We love to recommend wines and cheeses, and how they go together.</h3>
+            <h2 class="subtitle-text mb-4 text-center"> We love to recommend wines and cheeses, and how they go
+                together.</h2>
             <hr>
         </div>
     </div>
 
     <div>
-        <h3 class="colour-pick-text">How it works</h3>
+        <h3 class="text-center mt-5">How it works</h3>
     </div>
     <hr class="block-divider block-divider-bottom-margin">
     <div class="container about-container text-center">
         <div class="row">
             <!--Step 1 - Find colour -->
             <div class="col-md-4">
-                <i class="details-icon fas fa-palette"></i>
+                <i class="details-icon fas fa-question-circle"></i>
                 <p>Visit our Recommendation Page</p>
-                <p>Select the kind of wine or cheese you like, we'll match you with something that goes perfectly!</p>
+                <p>Select the kind of wine or cheese you like, we'll match you with something that goes perfectly!
+                </p>
                 <a href="{% url 'recommendation' %}" class="btn btn-primary">Recommendations</a>
             </div>
             <!--Step 2 - Enter details -->
             <div class="col-md-4">
-                <i class="details-icon fas fa-envelope"></i>
+                <i class="details-icon fas fa-wine-bottle"></i>
                 <p>Peruse the Shop</p>
                 <p>Pick up your recommendation, any accompaniments you may want, and anything else that takes your
                     fancy.</p>
@@ -50,7 +50,7 @@
             </div>
             <!--Contact CTA -->
             <div class="col-md-4">
-                <i class="details-icon fas fa-mobile"></i>
+                <i class="details-icon fas fa-clipboard-check"></i>
                 <p>Take a look at our Blog</p>
                 <p>We showcase the latest and greatest. Take in our thoughts and see if you agree with us here at
                     FromVin.</p>
@@ -61,9 +61,9 @@
 
     <div class="row">
         <div class="col">
-            <hr>
-            <h3 class="logo-font mb-4"> Wine Tasting </h3>
-            <hr>
+            <hr class="mb-5">
+            <h3 class="text-center mt-5"> Wine Tasting </h3>
+            <hr class="block-divider block-divider-bottom-margin">
         </div>
     </div>
 
@@ -71,42 +71,57 @@
         <div class="row">
             <!--Step 1 - Find colour -->
             <div class="col-md-3">
-                <i class="details-icon fas fa-palette"></i>
+                <i class="details-icon fas fa-eye"></i>
                 <p>Step 1</p>
                 <p>Appearance</p>
-                <p>Assess the colour and clarity, preferably against a plan background. Any brown tinges may suggest
-                    that the wine is corked (has gone off). A light colour will suggest a bright and fruity flavour
+                <p>Assess the colour and clarity, preferably against a plan background.</p>
+                <p>Any brown tinges may suggest
+                    that the wine is corked (has gone off).</p>
+                <p>A light colour will suggest a bright and fruity flavour
                     where a deep colour may lead you to expect a rich, earthy or mineraly note.</p>
             </div>
             <!--Step 2 - Enter details -->
             <div class="col-md-3">
-                <i class="details-icon fas fa-envelope"></i>
+                <i class="details-icon fas fa-tint"></i>
                 <p>Step 2</p>
-                <p>Nose</p>
-                <p>Swirl the wine in the glass (don't worry, it takes practice to get perfect!) and smell the aromas. If
-                    there is a vinegar-y smell then the wine has gone bad. Otherwise, you should be able to get a feel
-                    for how the wine will taste based on the scent profile. If you can detect those aromas strongly as
+                <p><strong>Nose</strong></p>
+                <p>Swirl the wine in the glass (don't worry, it takes practice to get perfect!) and smell the
+                    aromas.</p>
+                <p>If
+                    there is a vinegar-y smell then the wine has gone bad. Otherwise, you should be able to get a
+                    feel
+                    for how the wine will taste based on the scent profile.</p>
+                <p>If you can detect those aromas strongly
+                    as
                     you move your nose away from the glass, you can be assured that the wine has quality to it. </p>
             </div>
             <!--Contact CTA -->
             <div class="col-md-3">
-                <i class="details-icon fas fa-mobile"></i>
+                <i class="details-icon fas fa-glass-cheers"></i>
                 <p>Step 3</p>
                 <p>Taste</p>
-                <p>Take a sip of the wine. Hold it in your mouth and let a little air in there too. This will enhance
-                    the flavours. You're looking to feel the flavours on your tongue, the tannins on your cheeks and
-                    roof of mouth, and once you have swallowed or spat - how long the taste lingers. Get a feel for the
-                    flavours and the scent together and try to pull out what kinds of flavour notes you can find. </p>
+                <p>Take a sip of the wine. Hold it in your mouth and let a little air in there too. This will
+                    enhance
+                    the flavours.</p>
+                <p>You're looking to feel the flavours on your tongue, the tannins on your cheeks and
+                    roof of mouth, and once you have swallowed or spat - how long the taste lingers.</p>
+                <p>Get a feel for
+                    the
+                    flavours and the scent together and try to pull out what kinds of flavour notes you can find.
+                </p>
             </div>
             <!--Contact CTA -->
             <div class="col-md-3">
-                <i class="details-icon fas fa-mobile"></i>
+                <i class="details-icon fas fa-thumbs-up"></i>
                 <p>Step 4</p>
                 <p>Draw Conclusions</p>
-                <p>Once you have a feel for the qualities of the wine in question, you can start to pair it with food. A
+                <p>Once you have a feel for the qualities of the wine in question, you can start to pair it with
+                    food.</p>
+                <p>A
                     good pairing will enhance the good qualities of both the wine and the food. Whilst there are
-                    infinite combinations of wine and food, when it comes to cheese we've done the hard work for you!
-                    Head over to our Recommend page and check out our matches.</p>
+                    infinite combinations of wine and food, when it comes to cheese we've done the hard work for
+                    you!</p>
+                <p>Head over to our Recommend page and check out our matches.</p>
             </div>
         </div>
     </div>
@@ -114,26 +129,30 @@
     <div class="row">
         <div class="col">
             <hr>
-            <h3 class="logo-font mb-4"> Flavours </h3>
+            <h3 class="text-center mt-5"> Flavours </h3>
+            <hr class="block-divider block-divider-bottom-margin">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col text-center">
+            <p>Below you can see the huge range of incredible flavours that you can try to seek out in your tasting
+                adventure!</p>
+            <img class="img-fluid wine-wheel-image" src="{{ IMAGE_URL }}wine_wheel.jpg" alt="Flavour Wheel">
             <hr>
         </div>
     </div>
 
     <div class="row">
         <div class="col">
-            <hr>
-            <img class="img-fluid" src="{{ IMAGE_URL }}wine_wheel.jpg" alt="Flavour Wheel">
-            <hr>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col">
-            <hr>
-            <h3 class="logo-font mb-4"> Summary </h3>
-            <hr>
-            <p>This is just a basic overlook at the huge topic of wine tasting. We'll expand these notes over time, but
-                for more information take a look at our blog posts!</p>
+            <h3 class="text-center"> Summary </h3>
+            <hr class="block-divider block-divider-bottom-margin">
+            <p>This is just a basic overlook at the huge topic of wine tasting. We'll expand these notes over time,
+                but
+                for more information take a look at our blog posts! Until then, happy tasting, and</p>
+            <h3 class="text-center mb-5"> Cheers! </h3>
+            <img class="img-fluid" src="{{ IMAGE_URL }}cheers.jpg" alt="Cheers, from FromVin!">
+            <hr class="block-divider block-divider-bottom-margin">
         </div>
     </div>
 
