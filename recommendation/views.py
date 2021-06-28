@@ -42,7 +42,7 @@ def choose(request):
         queryset = Product.objects.all()
         filtered = queryset.filter(tastingprofile=wineValue)
         if filtered:
-            products = sample(list(filtered), 2)
+            products = sample(list(filtered), 3)
         else:
             products = {}
     #categories = None
@@ -53,7 +53,7 @@ def choose(request):
         queryset = Product.objects.all()
         filtered = queryset.filter(tastingprofile=cheeseValue)
         if filtered:
-            products = sample(list(filtered), 2)
+            products = sample(list(filtered), 3)
         else:
             products = {}
     #categories = None
