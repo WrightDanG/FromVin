@@ -48,6 +48,14 @@ body {
     color: #82261f;
 }
 
+.basket-icon-dark {
+    color: #cc9601 !important;
+}
+
+.basket-icon {
+    color: #fcba03 !important;
+}
+
 /* ------------------------------------------------------------------------------- Fonts */
 
 .text-black {
