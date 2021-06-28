@@ -360,20 +360,62 @@ The suberb dropdown category list has also been carried over from the boutique a
 
 ![Screenshot_16](https://user-images.githubusercontent.com/61311614/123704413-86cbe680-d85d-11eb-9899-abe3c7cc2fd5.png)
 ![Screenshot_17](https://user-images.githubusercontent.com/61311614/123704415-87647d00-d85d-11eb-958d-eb86f79d60e0.png)
+
+On clicking the basket (bag) button at the top right of the page, the user can navigate to the items that they have in their basket, ready for checkout once they are ready using the 'Secure Checkout' button. 
+
 ![Screenshot_18](https://user-images.githubusercontent.com/61311614/123704420-8895aa00-d85d-11eb-833c-c3fe6a1d7bfa.png)
+
+The user is presented with delivery details to enter, a summary of the order and a space for payment details via the stripe text boxes. Whilst the user is able to checkout as a guest, they benefit from taking the option here of making an account as their information will be saved.
+
 ![Screenshot_19](https://user-images.githubusercontent.com/61311614/123704421-892e4080-d85d-11eb-9d98-f577c5e8a80b.png)
+
+On clicking 'Create Account' - they are directed to the sign up page, where FromVin will collect their details. 
+
 ![Screenshot_20](https://user-images.githubusercontent.com/61311614/123704422-892e4080-d85d-11eb-8295-504191e4e56a.png)
+
+Note that validation is present on this form, the fields are required.
+
 ![Screenshot_21](https://user-images.githubusercontent.com/61311614/123704424-892e4080-d85d-11eb-8871-96b307e517d0.png)
+
+Also note that under 'My Account', no account details are yet present, due to the user not having an account/is not logged in.
+
 ![Screenshot_22](https://user-images.githubusercontent.com/61311614/123704425-89c6d700-d85d-11eb-937c-330a4d21ef37.png)
+
+On sign up, django has a built-in verification process, where the user is sent an email seeking confirmation that the email is correct and active.
+
 ![Screenshot_23](https://user-images.githubusercontent.com/61311614/123704427-89c6d700-d85d-11eb-8334-8fb9f47433c3.png)
+
+The email follows the below format and arrived almost immediately. The format is clear, concise and the process is simple.
+
 ![Screenshot_24](https://user-images.githubusercontent.com/61311614/123704428-89c6d700-d85d-11eb-9c96-0ff7a5a3d955.png)
+
+The link takes them to a confirm page, with a clear call to action.
+
 ![Screenshot_25](https://user-images.githubusercontent.com/61311614/123704430-8a5f6d80-d85d-11eb-8b15-14e8849ef3c0.png)
+
+They are then presented with the call to sign in with their new credentials.
+
 ![Screenshot_26](https://user-images.githubusercontent.com/61311614/123704431-8a5f6d80-d85d-11eb-8995-0042ab962265.png)
+
+The user now has a profile on the 'My Account' drop down menu.
+
 ![Screenshot_27](https://user-images.githubusercontent.com/61311614/123704433-8a5f6d80-d85d-11eb-9133-8d0990174fc5.png)
+
+Back at the checkout, there is now the option to have the delivery credentials saved. The user is required to fill these in to proceed with the order.
+
 ![Screenshot_28](https://user-images.githubusercontent.com/61311614/123704437-8af80400-d85d-11eb-8dd4-4eaedb8b1b32.png)
+
+On completion (and after a fun loading spinner), the user is presented with confirmation and a message stating success.
+
 ![Screenshot_29](https://user-images.githubusercontent.com/61311614/123704439-8af80400-d85d-11eb-86fa-a1466353f7b4.png)
+
+The below is just to show that stripe successfully received and processed the information sent over by the user. The validation presented by the boutique ado project is all present so that should this not work, the user is informed and orders do not go through.
+
 ![Screenshot_30](https://user-images.githubusercontent.com/61311614/123704441-8b909a80-d85d-11eb-8830-fc5455fe9059.png)
 ![Screenshot_31](https://user-images.githubusercontent.com/61311614/123704444-8b909a80-d85d-11eb-9ea4-d4954d74be49.png)
+
+The user is then sent a custom email detailing their order. Going forward, this would utilise additional styling to reflect the company brand. 
+
 ![Screenshot_32](https://user-images.githubusercontent.com/61311614/123704445-8c293100-d85d-11eb-8935-759afb4d7400.png)
 ![Screenshot_33](https://user-images.githubusercontent.com/61311614/123704446-8c293100-d85d-11eb-890e-9b944564b269.png)
 ![Screenshot_34](https://user-images.githubusercontent.com/61311614/123704448-8c293100-d85d-11eb-8a30-7f828b11a2c8.png)
