@@ -299,21 +299,65 @@ Generally speaking that additional IMAGE_URL setting should not be necessary, bu
 
 ## User story walkthroughs
 
+When a user finds their way to FromVin, they are greeted with the guide page. Here they are immediately presented with what the site is for, and where they can go to access it's features, along with reasonings why they would want to.
+
 ![Screenshot_1](https://user-images.githubusercontent.com/61311614/123704377-7f0c4200-d85d-11eb-80c6-834a5104374d.png)
+
+On scrolling down, FromVin gives a little description in what a user should look for when it comes to wine tasting. As this is a part of the FromVin experience, it was thought that everyone should have a place to jump on to the experience with. Future improvements would expand the information on offer, either here in the guide, in the blog, or ideally both.
+
 ![Screenshot_2](https://user-images.githubusercontent.com/61311614/123704379-7fa4d880-d85d-11eb-81c4-da0809d071ae.png)
+
+Whilst the site is meant to look clean and professional, I couldn't resist adding the eye-catching coloured wheel of wine flavours. I found it to be both informative and interesting. The hope is that the user would also, as it would give them flavour ideas to look for, for the new. Also perhaps novel ones for the experienced. 
+
 ![Screenshot_3](https://user-images.githubusercontent.com/61311614/123704380-7fa4d880-d85d-11eb-95d3-313e3b7f7e87.png)
+
+I've addressed elsewhere in this readme that the guide was intended to be bigger, but this small summary section is meant to promote a sense of cameraderie between FromVin, and the user. In future it would cap off the end of a more thorough tasting guide.
+
 ![Screenshot_4](https://user-images.githubusercontent.com/61311614/123704382-80d60580-d85d-11eb-8d3e-2663ad21b853.png)
+
+Back up the page, the user has then several options of where to go. The 'How it works' section suggests heading to one of three places. We'll take the blog first, which is an extension to the guide. It can be accessed via the button link on the page, or under 'content' in the navigation. 
+
 ![Screenshot_5](https://user-images.githubusercontent.com/61311614/123704389-829fc900-d85d-11eb-8806-ba47f97d0c66.png)
+
+Within the blog page, the user is presented with a list of the most recent blog entries. The titles are prominent to give them an idea of what they are looking at, and they are able to click into each one to expand the information.
+
 ![Screenshot_6](https://user-images.githubusercontent.com/61311614/123704391-83385f80-d85d-11eb-9c91-d96324b1eb52.png)
+
+The content at present is mostly representational, but going forward the user would be able to look at additional tasting guides, spotlights on new products and announcements from the FromVin team. Current content credit goes to WineFolly (see attribution below).
+
 ![Screenshot_7](https://user-images.githubusercontent.com/61311614/123704392-83385f80-d85d-11eb-8980-89378995c45b.png)
+
+The user can then head over to the recommendation page. The idea here is that a user may know what kind of wine or cheese that they like, or have, and are able to find a cheese or wine respectively that will go well with it. This is detailed to them in another 'How it works' section, for clarity.
+
 ![Screenshot_8](https://user-images.githubusercontent.com/61311614/123704393-83385f80-d85d-11eb-98c7-3b59484271b6.png)
+
+The user is presented with simple, broad options for what they know that they already like. 
+
 ![Screenshot_9](https://user-images.githubusercontent.com/61311614/123704394-83d0f600-d85d-11eb-9c3c-8aaec768240e.png)
+
+They are then presented with three options that FromVin determines that would go well with what they have selected. The site utilises a 'tasting profile' category assigned to each product. As it stands, this is just a categorisation number, but scaled up it could expand to multiple options matching against a relational database of mapped flavours. 
+
 ![Screenshot_10](https://user-images.githubusercontent.com/61311614/123704396-83d0f600-d85d-11eb-9b57-6a9fbc44fa39.png)
+
+The user is able to click into each product, and are directed to the product details page where they are able to select a quantity and add them to a basket. 
+
 ![Screenshot_11](https://user-images.githubusercontent.com/61311614/123704399-84698c80-d85d-11eb-8c6b-236736367615.png)
+
+The user is presented with feedback that their addition was successful.
+
 ![Screenshot_12](https://user-images.githubusercontent.com/61311614/123704400-85022300-d85d-11eb-84c0-75e44c9adc30.png)
+
+Now that shopping has commenced, the user is able to 'Keep Shopping' via the labelled button here, or in the navigation. The shop link was kept out of a dropdown to be readily accessible at all times. 
+
 ![Screenshot_13](https://user-images.githubusercontent.com/61311614/123704403-85022300-d85d-11eb-938c-4e175959ab41.png)
+
+The user is able to utilise the sort function to manipulate the order of the products presented to them.
+
 ![Screenshot_14](https://user-images.githubusercontent.com/61311614/123704406-859ab980-d85d-11eb-884e-e4b7ed40ac2a.png)
 ![Screenshot_15](https://user-images.githubusercontent.com/61311614/123704411-86335000-d85d-11eb-8ce3-913f3ad21446.png)
+
+The suberb dropdown category list has also been carried over from the boutique ado project. This allows the user to filter the products down by category for a tailored shopping experience. 
+
 ![Screenshot_16](https://user-images.githubusercontent.com/61311614/123704413-86cbe680-d85d-11eb-9899-abe3c7cc2fd5.png)
 ![Screenshot_17](https://user-images.githubusercontent.com/61311614/123704415-87647d00-d85d-11eb-958d-eb86f79d60e0.png)
 ![Screenshot_18](https://user-images.githubusercontent.com/61311614/123704420-8895aa00-d85d-11eb-833c-c3fe6a1d7bfa.png)
