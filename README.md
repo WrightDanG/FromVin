@@ -230,6 +230,12 @@ The other option is as follows:
 
 Whilst I still prefer the black icons, the white is much preferable to the lighter navbar in my opinion.
 
+On making the change, the validator suggests that the change is much better:
+
+![image](https://user-images.githubusercontent.com/61311614/123829399-56865580-d8fa-11eb-98f3-db920617d0ef.png)
+
+This is somewhat limited as you'd struggle to get to pages that require a login, but the exercise is useful, in my opinion.
+
 #### Internal custom validation
 Note for future - code to disable form and test webhooks can be found in BA profile video 9, at the end. form.submit in stripe_elements.js.
 
@@ -238,6 +244,140 @@ Note for future - code to disable form and test webhooks can be found in BA prof
 
 ### Page links
 
+#### FromVin logo 
+
+Should navigate back to home (guide) page - confirmed.
+
+#### Navigation Bar 
+
+Content dropdown - should expand to show 'Guide', 'Recommend' and 'Blog' links - confirmed.
+
+Guide - should lead to the homepage - confirmed.
+
+Recommend - should lead to recommendation page - confirmed.
+
+Blog - should lead to Blog page - confirmed.
+
+Shop - should lead to the products page - confirmed.
+
+My Account (Logged Out) - Should be presented with a dropdown showing 'Register' and 'Login' - confirmed.
+
+Register - should lead to the signup page - confirmed. 
+
+Login - should lead to the signin page - confirmed.
+
+My Account (Logged In) - should be presented with a dropdown showing 'My Profile' and 'Logout' - confirmed.
+
+My Profile - should lead to the profile page - confirmed.
+
+Logout - should lead to the logout page - confirmed.
+
+My Account (Logged In Superuser) - should have the additional dropdown option of 'Product Management' - confirmed.
+
+Product Management - should lead to add product page - confirmed. 
+
+Bag - should lead to the user's bag, and update when items added - confirmed.
+
+Search box - should take a query from a user, and apply it as a product filter - confirmed.
+
+
+#### Secondary 'Products' Navigation
+
+All Products - should dropdown to show 'By Price', 'By Category', 'All Products' filters - confirmed.
+
+By Price - should lead to products with a 'price high to low' filter - confirmed.
+
+By Category - should lead to products with a 'category A-Z' filter - confirmed.
+
+All Products - should lead to the products page - confirmed.
+
+Wines - should dropdown to show 'Red Wines', 'White Wines', 'Dessert Wines', 'All Wines' filters - confirmed.
+
+Red Wines/White Wines/Dessert Wines/All Wines - should lead to products with the respective filter applied - confirmed.
+
+Cheeses - should dropdown to show 'Hard Cheeses', 'Soft Cheeses', 'All Cheeses' filters - confirmed.
+
+Hard Cheeses/Soft Cheeses/ All cheeses - should lead to products with the respective filter applied - confirmed.
+
+Accompaniments - should dropdown to show 'All Accompaniments' - confirmed.
+
+All Accompaniments - should lead to products with an 'extras' filter applied - confirmed. 
+
+#### Guide Page
+
+Recommend Button - should lead to recommendation page - confirmed.
+
+Shop - should lead to products page - confirmed.
+
+Blog - should lead to the blog page - confirmed.
+
+#### Recommend Page
+
+Find me Cheese button - should take the value of the above dropdown and return appropriate products (based on tasting profile) below - confirmed.
+
+Find me Wine button - should take the value of the above dropdown and return appropriate products (based on tasting profile) below - confirmed.
+
+Product cards - Once present, clicking on the image should lead to the appropriate product details page - confirmed.
+
+
+#### Blog Page
+
+Read more - should lead to the appropriate post details page - confirmed.
+
+#### Blog Details Page
+
+Back To Blog - should return to the blog page - confirmed. 
+
+
+#### Products Page
+
+Product cards - clicking on the product image should lead to the appropriate product details page - confirmed. 
+
+Product cards (as superuser) - should have an edit and delete option to amend the appropriate product - confirmed.
+
+Edit - should lead to the edit page for the appropriate product - confirmed.
+
+Delete - should remove the appropriate product from the database - confirmed.
+
+Top of page button - should return to the top of the page - confirmed.
+
+Sort box - should add filter to products based on selection - confirmed.
+
+
+##### Product Details Page
+
+(As Superuser) Edit and Delete buttons - should behave the same as on the products page - confirmed.
+
+Quantity selector - should allow amendments to the amount of products - confirmed.
+
+Keep Shopping - should go back to the products page - confirmed.
+
+Add to Bag - should add selected quantity of product to the bag - confirmed.
+
+
+#### Bag Page
+
+Quantity selector - should behave the same as on the product details page - confirmed.
+
+Keep Shopping - should go back to the products page - confirmed
+
+Secure Checkout - should go to the checkout page - confirmed.
+
+
+#### Checkout Page
+
+(Logged Out) Sign In/ Register links should go to their respective namesake pages - confirmed.
+
+(Logged In) Save Information checkbox - when checked should add form information to user profile - confirmed.
+
+Adjust Bag - should go back to bag page - confirmed.
+
+Complete Order - should submit form data to stripe payments, and send user an email if successful - confirmed.
+
+
+#### Checkout Success Page
+
+Back to Shop - should lead to products page - confirmed.
 
 
 ### Browsers
