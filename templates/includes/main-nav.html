@@ -1,17 +1,19 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
+            <!-- Display products dropdown -->
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
+            <!-- Filter by price, category -->
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
-
+        <!-- Filter by Wine Category -->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="wines-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -25,7 +27,7 @@
                     Wines</a>
             </div>
         </li>
-
+        <!--  Filter by cheese category -->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="cheeses-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -37,7 +39,7 @@
                 <a href="{% url 'products' %}?category=hard_cheese,soft_cheese" class="dropdown-item">All Cheeses</a>
             </div>
         </li>
-
+        <!-- Filter by additional products (bread, chutney etc) -->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black" href="#" id="additionals-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -15,6 +15,7 @@
     {% endblock %}
 
     {% block corecss %}
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Favicon Start -->
@@ -30,11 +31,13 @@
     {% endblock %}
 
     {% block corejs %}
+    <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
+    <!-- Boostrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
@@ -54,10 +57,12 @@
     <header class="container-fluid fixed-top">
         <div class="row" id="fixed-nav">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a class="navbar-brand" href="{% url 'guide' %}"><span style="color: #fcba03">From</span><span
-                        style="color: #fff">Vin</span></a>
+                <!-- Main logo -->
+                <a class="navbar-brand" href="{% url 'guide' %}"><span class="from-text"">From</span><span
+                        class=" vin-text"">Vin</span></a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <!-- Search box submission form -->
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-50 d-sm-none d-none d-md-flex">
                         <input class="form-control border border-black" type="text" name="q" placeholder="Search">
@@ -71,7 +76,7 @@
                     </div>
                 </form>
             </div>
-
+            <!-- Dropdown for non-store pages (guide, recommend, blog) -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
@@ -91,6 +96,7 @@
                                     class="fas fa-clipboard-check fa-lg"></i> Blog</a>
                         </div>
                     </li>
+                    <!-- Store link -->
                     <li class="list-inline-item">
                         <a class="text-black nav-link" href="{% url 'products' %}">
                             <div class="text-center">
@@ -99,6 +105,7 @@
                             </div>
                         </a>
                     </li>
+                    <!-- Account link -->
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link d-sm-none d-none d-md-block" href="#" id="user-options"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -107,6 +114,7 @@
                                 <p class="my-0">My Account</p>
                             </div>
                         </a>
+                        <!-- Only display appropriate pages with appropriate permissions -->
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
@@ -120,6 +128,7 @@
                             {% endif %}
                         </div>
                     </li>
+                    <!-- Display plain basket, or coloured basket with correct total price if basket items exist -->
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}basket-icon text-info{% else %}text-black{% endif %} nav-link d-sm-none d-none d-md-block"
                             href="{% url 'view_bag' %}">
@@ -139,13 +148,13 @@
             </div>
         </div>
         <div class="row bg-white">
+            <!-- Display product filters sitewide, so users can always get to the store -->
             <nav class="navbar navbar-expand-lg navbar-light w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 {% include 'includes/mobile-top-header.html' %}
-                <!--Move this to just the store pages? -->
                 {% include 'includes/main-nav.html' %}
             </nav>
         </div>
@@ -155,7 +164,7 @@
 
     {% block page_header %}
     {% endblock %}
-
+    <!-- Handle messages display -->
     {% block messages%}
     {% if messages %}
     {% for message in messages %}

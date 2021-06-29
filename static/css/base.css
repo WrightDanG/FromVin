@@ -11,12 +11,13 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-/* Logo */
-
-.title-text {
-    font-size: 25pt;
-    margin-top: 25px;
+.order-history {
+    max-height: 416px;
+    /* height of profile form + submit button */
+    overflow-y: auto;
 }
+
+/* ------------------------------------------------------- Logo and nav */
 
 .navbar-brand {
     font-size: 24pt;
@@ -28,19 +29,20 @@ body {
     background-color: #82261f;
 }
 
-.order-history {
-    max-height: 416px;
-    /* height of profile form + submit button */
-    overflow-y: auto;
+/* Display logo as two-colour */
+.from-text {
+    color: #fcba03;
 }
+
+.vin-text {
+    color: #fff;
+}
+
+/* ---------------------------------------------------------------------- Images */
 
 .wine-wheel-image {
     max-width: 80%;
     max-height: 80%;
-}
-
-.subtitle-text {
-    font-size: 20pt;
 }
 
 .details-icon {
@@ -58,12 +60,22 @@ body {
 
 /* ------------------------------------------------------------------------------- Fonts */
 
+.title-text {
+    font-size: 25pt;
+    margin-top: 25px;
+}
+
 .text-black {
     color: black !important;
 }
 
+.subtitle-text {
+    font-size: 20pt;
+}
+
 /* ------------------------------------------------------------------------------- Cards */
 
+/* Ensure product card images do not exceed a certain size */
 .card-img-top {
     max-width: 250px;
     max-height: 350px;
@@ -77,6 +89,7 @@ body {
 
 /* ------------------------------------------------------------------------------- Buttons */
 
+/* Set badges to have site styling */
 .category-badge>span.badge:hover {
     background: #82261f !important;
     color: #fff !important;
@@ -96,10 +109,7 @@ body {
     cursor: pointer;
 }
 
-.alert {
-    /* margin-top: 20px; */
-}
-
+/* Set bootstrap button colours to be consistent with site styling */
 .btn-primary {
     background-color: #82261f;
     border-color: #000;
@@ -130,6 +140,7 @@ body {
 
 /* ----------------------------------------------------------------------------------------------- Loading */
 
+/* Set overlay to be above everything except a stripe validation field */
 #loading-overlay {
     display: none;
     position: fixed;
@@ -150,7 +161,7 @@ body {
 }
 
 /* ----------------------------------------------------------------------- Stripe (from the stripe documentation) */
-StripeElement,
+.StripeElement,
 .stripe-style-input {
     box-sizing: border-box;
     height: 40px;
@@ -177,8 +188,9 @@ StripeElement,
     color: #aab7c4;
 }
 
-/* -------------------------------------------Selectors */
+/* ----------------------------------------------------------------------- Selectors */
 
+/* Ensure colours are consistent across selectors */
 select,
 select option,
 #profile-form-input .form-control {
@@ -195,6 +207,7 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
+/* Set countryfield selector to be consistent with other inputs */
 #id_default_country,
 #id_default_country option:not(:first-child) {
     color: #000;
@@ -204,8 +217,9 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
+/*  */
 
-/* -------------------------------- Media Queries */
+/* -------------------------------------------------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
