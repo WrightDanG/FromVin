@@ -1,6 +1,9 @@
 from django import forms
-from django.forms import ModelForm
 
+# Was originally going to live in models.py
+# But forms.py made more sense in context
+
+# Identify broad types of wine
 
 WINE_CHOICES = [
     ('0', 'I like my wine...'),
@@ -12,7 +15,7 @@ WINE_CHOICES = [
     ('6', 'White: Strong, Complex and Mineral-y')
 ]
 
-# Possibly change cats to be more approachable - Light / smelly / sweet
+# Identify broad types of cheese
 
 CHEESE_CHOICES = [
     ('0', 'I like my cheese...'),

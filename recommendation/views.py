@@ -1,39 +1,22 @@
-from django.views.generic.edit import CreateView
 from django.shortcuts import render
 from random import sample
-from django.conf import settings
 
-from products.models import Product, Category, TastingProfile
+from products.models import Product
 
 from.forms import WineForm, CheeseForm
 
 
-# Create your views here.
-
-
 def recommendation(request):
     """ Returns the recommendation page. """
-
-    #products = Product.objects.all()
-    #categories = None
-
-    #products = products.filter(category=2)
-    #categories = Category.objects.filter(name__in="red_wine")
-
+    # Add wine and cheese selections to context
     context = {}
     context['wineform'] = WineForm()
     context['cheeseform'] = CheeseForm()
-    # if 'wine_choice' in request.GET:
-    #     wineValue = request.GET['wine_choice']
-    #     print(wineValue)
-    # elif 'cheese_choice' in request.GET:
-    #     cheeseValue = request.GET['cheese_choice']
-    #     print(cheeseValue)
+
     return render(request, 'recommendation/recommendation.html', context)
 
-# Potentially add back to main method?
 
-
+# Return filtered products for display on recommend page.
 def choose(request):
 
     if 'wine_choice' in request.GET:
@@ -45,7 +28,6 @@ def choose(request):
             products = sample(list(filtered), 3)
         else:
             products = {}
-    #categories = None
 
     elif 'cheese_choice' in request.GET:
         cheeseValue = request.GET['cheese_choice']
@@ -56,7 +38,6 @@ def choose(request):
             products = sample(list(filtered), 3)
         else:
             products = {}
-    #categories = None
 
     context = {'products': products}
     context['wineform'] = WineForm()
