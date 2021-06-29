@@ -32,7 +32,8 @@ class OrderForm(forms.ModelForm):
         # focus first on the full name field
         self.fields['full_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            # Ensure django doesn't throw an error as country is dropdown select
+            # Ensure django doesn't throw an error
+            # as country is dropdown select
             if field != 'country':
                 # add a star to required fields
                 if self.fields[field].required:

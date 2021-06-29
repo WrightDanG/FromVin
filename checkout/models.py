@@ -12,9 +12,11 @@ from django_countries.fields import CountryField
 
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
-    # set profile foreignkey, ensuring that orderhistory remains if user is deleted
+    # set profile foreignkey, ensuring that orderhistory
+    # remains if user is deleted
     user_profile = models.ForeignKey(
-        UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders')
+        UserProfile, on_delete=models.SET_NULL, null=True, blank=True,
+        related_name='orders')
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
@@ -31,7 +33,8 @@ class Order(models.Model):
         max_digits=10, decimal_places=2, null=False, default=0)
     grand_total = models.DecimalField(
         max_digits=10, decimal_places=2, null=False, default=0)
-    # Unique values to each purchase to check for multiple orders with the same products
+    # Unique values to each purchase to check for multiple
+    # orders with the same products
     original_bag = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(
         max_length=254, null=False, blank=False, default='')
@@ -74,14 +77,18 @@ class Order(models.Model):
 
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False,
-                              on_delete=models.CASCADE, related_name='lineitems')
+                              on_delete=models.CASCADE,
+                              related_name='lineitems')
     product = models.ForeignKey(
         Product, null=False, blank=False, on_delete=models.CASCADE)
+    # Requires removal but seems to prevent the site from loading.
+    # Perhaps migration related as amendment to model.
     product_size = models.CharField(
-        max_length=2, null=True, blank=True)  # XS, S, M, L, XL
+        max_length=2, null=True, blank=True)  
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(
-        max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+        max_digits=6, decimal_places=2, null=False,
+        blank=False, editable=False)
 
     def save(self, *args, **kwargs):
         """

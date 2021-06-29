@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (render, redirect, reverse,
+                              get_object_or_404, HttpResponse)
 from django.contrib import messages
 from django.conf import settings
 from django.views.decorators.http import require_POST
@@ -82,7 +83,8 @@ def checkout(request):
                 # Handle if somehow an item is added that doesn't exist
                 except Product.DoesNotExist:
                     messages.error(request,
-                                   "One of the products in your bag wasn't found in our database. "
+                                   "One of the products in your bag wasn't found \
+                                        in our database. "
                                    )
                     order.delete()
                     return redirect(reverse('view_bag'))
@@ -90,7 +92,8 @@ def checkout(request):
             # Flag if thje user wishes to save their details
             request.session['save_info'] = 'save-info' in request.POST
             # Send the user to a success page
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse('checkout_success',
+                                    args=[order.order_number]))
         else:
             # Handle errors within the form
             messages.error(request, 'There was an error with your form. \
@@ -111,7 +114,8 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        # Attempt to prefill the form with any info the user maintains in their profile
+        # Attempt to prefill the form with any info the user
+        # maintains in their profile
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)
