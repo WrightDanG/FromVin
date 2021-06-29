@@ -11,15 +11,17 @@ STATUS = (
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    # Confirm if this will use existing users
+    # Utilise existing users
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='blog_posts')
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
+    # Utilise the above status settings
     status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
+        # Order posts by created date descending
         ordering = ['-created_on']
 
     def __str__(self):

@@ -1,6 +1,8 @@
 from django.contrib import admin
 from .models import Post
 
+# Populate the admin to allow blog content control.
+
 
 class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug', 'status', 'created_on')
