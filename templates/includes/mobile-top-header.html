@@ -26,14 +26,14 @@
     </li>
     <li class="list-inline-item dropdown">
         <!-- Display account dropdown -->
-        <a class="text-black nav-link d-block d-md-none" href="#" id="user-options" data-toggle="dropdown"
+        <a class="text-black nav-link d-block d-md-none" href="#" id="user-options-mobile" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
                 <div><i class="fas fa-id-card fa-lg"></i></div>
                 <p class="my-0">My Account</p>
             </div>
         </a>
-        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+        <div class="dropdown-menu border-0" aria-labelledby="user-options-mobile">
             <!-- Only allow if logged in and superuser respectively -->
             {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
