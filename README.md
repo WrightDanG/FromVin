@@ -380,6 +380,56 @@ Complete Order - should submit form data to stripe payments, and send user an em
 Back to Shop - should lead to products page - confirmed.
 
 
+#### Profile Page (Logged in)
+
+Update Information - should take the above form data and log any changes against the user's account - confirmed.
+
+Order number links - should lead to the respective checkout success page - confirmed.
+
+
+#### Product Management Page (Logged In - Superuser)
+
+Choose File - should open an uploader window for a product image - confirmed
+
+Cancel - should lead to the products page - confirmed.
+
+Add Product - should take the form data and input a product into the database - confirmed.
+
+#### Sign In Page
+
+Sign up link - should lead to the sign up page - confirmed.
+
+Forgot password - should lead to the password reset page - confirmed.
+
+Sign In - should log the user in if the credentials are correct - confirmed.
+
+Remember Me checkbox - should store the username and password of the user if they choose - confirmed.
+
+
+#### Sign Out Page
+
+Sign Out - Should remove the session for the user and lead to the homepage - confirmed.
+
+#### Sign Up Page
+
+Sign In link - should lead to the sign in page - confirmed.
+
+Sign Up - should take the form data and insert a new user into the database, then trigger a verification email - confirmed.
+
+Verification email link - should verify the user and lead back to the site - confirmed.
+
+
+#### Password Reset Page
+
+Reset My Password - should send a reset link to the chosen email if they are registered - confirmed.
+
+Reset email link - should lead to the set password page if the key is valid, IF Note
+
+
+#### Set Password Page
+
+Change Password - should take the password form data and set a new password for the user - Getting 500 error, required amendments to the template.
+
 ### Browsers
 
 
