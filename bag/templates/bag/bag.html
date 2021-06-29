@@ -14,7 +14,6 @@
 <div class="container mb-2">
     <div class="row">
         <div class="col">
-            <hr>
             <h2 class="title-text text-center mb-4">Shopping Bag</h2>
             <hr>
         </div>
@@ -25,6 +24,7 @@
             {% if bag_items %}
             <div class="table-responsive rounded">
                 <table class="table table-sm table-borderless">
+                    <!-- Table labels -->
                     <thead class="text-black">
                         <tr>
                             <th scope="col">Product Info</th>
@@ -34,7 +34,7 @@
                             <th scope="col">Subtotal</th>
                         </tr>
                     </thead>
-
+                    <!-- Product information making up table content -->
                     {% for item in bag_items %}
                     <tr>
                         <td class="p-3 w-25">
@@ -54,6 +54,7 @@
                             <p class="my-0">£{{ item.product.price }}</p>
                         </td>
                         <td class="py-3 w-25">
+                            <!-- Quantity controller - utilises JS at base of page -->
                             <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                 {% csrf_token %}
                                 <div class="form-group">
@@ -95,6 +96,7 @@
                             <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
                             <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
                             {% if free_delivery_delta > 0 %}
+                            <!-- Call to action for user to add more products -->
                             <p class="mb-1 text-danger">
                                 You could get free delivery by spending just <strong>£{{ free_delivery_delta }}</strong>
                                 more!
@@ -103,6 +105,7 @@
                         </td>
                     </tr>
                     <tr>
+                        <!-- Back to Products -->
                         <td colspan="5" class="text-right">
                             <a href="{% url 'products' %}" class="btn btn-primary">
                                 <span class="icon">
@@ -110,6 +113,7 @@
                                 </span>
                                 <span>Keep Shopping</span>
                             </a>
+                            <!-- Continue to checkout -->
                             <a href="{% url 'checkout' %}" class="btn btn-primary">
                                 <span>Secure Checkout</span>
                                 <span class="icon">
@@ -120,6 +124,7 @@
                     </tr>
                 </table>
             </div>
+            <!-- Handle if nothing in bag -->
             {% else %}
             <p class="lead mb-5">Your bag is empty.</p>
             <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
@@ -135,7 +140,7 @@
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
 
-<!-- Move to separate js file? -->
+<!-- Handle quantity updates -->
 
 <script type="text/javascript">
     // Update quantity on click

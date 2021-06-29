@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
-from django.contrib import messages
 from products.models import Product
+from django.contrib import messages
+from django.shortcuts import (render, redirect, reverse, HttpResponse,
+                              get_object_or_404)
 
 
 def view_bag(request):
@@ -13,7 +14,8 @@ def add_to_bag(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
     # Get the product so that we can reference it in the message
     product = get_object_or_404(Product, pk=item_id)
-    # Pass the amount of items and url for the user to return to their previous place.
+    # Pass the amount of items and url for the user
+    # to return to their previous place.
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     # If there is no 'bag' in the session then go ahead and create one
@@ -57,7 +59,7 @@ def remove_from_bag(request, item_id):
 
     try:
         bag = request.session.get('bag', {})
-
+        # Pop will remove and not save the item
         bag.pop(item_id)
 
         request.session['bag'] = bag

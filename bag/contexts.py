@@ -6,11 +6,14 @@ from products.models import Product
 
 def bag_contents(request):
 
+    # Set variables before assignments
     bag_items = []
     total = 0
     product_count = 0
+    # Get current bag from session
     bag = request.session.get('bag', {})
 
+    # Get product details for bag items
     for item_id, quantity in bag.items():
         product = get_object_or_404(Product, pk=item_id)
         total += quantity * product.price
@@ -21,6 +24,7 @@ def bag_contents(request):
             'product': product,
         })
 
+    # Calculate delivery cost
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
