@@ -423,16 +423,32 @@ Verification email link - should verify the user and lead back to the site - con
 
 Reset My Password - should send a reset link to the chosen email if they are registered - confirmed.
 
-Reset email link - should lead to the set password page if the key is valid, IF Note
+Reset email link - should lead to the set password page if the key is valid, if not then should divert to a 'Bad key' page - confirmed by using an expired link.
 
 
 #### Set Password Page
 
-Change Password - should take the password form data and set a new password for the user - Getting 500 error, required amendments to the template.
+Change Password - should take the password form data and set a new password for the user - Getting 500 server error:
+
+![image](https://user-images.githubusercontent.com/61311614/123853070-edf8a200-d914-11eb-9c68-4c1b240362a7.png)
+
+
+After some research, it transpired that in amending settings.py to fit the PEP8 line length standards, the auth password validators were moved down a line to fit. This unfortunately breaks this functionality, so the changes have been reverted. Now the status is successful:
+
+![image](https://user-images.githubusercontent.com/61311614/123852391-28157400-d914-11eb-94dc-6614ce99c2b4.png)
 
 ### Browsers
 
+The below browsers have had the website opened, navigated through and confirmed to be functional, alongside going through the above testing points:
 
+- Firefox
+
+It was noted that there is a console error on Firefox in relation to the content security policy. [stackoverflow](https://stackoverflow.com/questions/37298608/content-security-policy-the-pages-settings-blocked-the-loading-of-a-resource/37308542) suggests that a fix can be made in the meta in the page header, however the security is there for a reason and should probably be preserved. As an investigation however, I added 'unsafe-inline' as a Content Security Policy in the meta and the errors did stop. A better solution found on [csper.oi](https://csper.io/blog/no-more-unsafe-inline) suggests that just moving the javascript to .js files would be a better solution. 
+
+Due to time pressures, I have removed the unsafe-inline tag (for security), will add the javascript move to known issues and have confirmed that the stripe payments, which seem to be at least one of the causes, still function on FireFox - confirmed. 
+
+- Chrome
+- Microsoft Edge
 
 
 
@@ -452,6 +468,7 @@ Change Password - should take the password form data and set a new password for 
 - On removing size from checkout/models.py - the port refuses to open. This may be migration related.
 - Line length error in settings.py (password validation settings) has been left, as readability has been prioritised.
 - Decouple removed from settings but not from requirements.txt.
+- There is a content security policy error on firefox due to the use of inline javascript. The JS has been left due to time pressures, but the reasoning and research has all been explained under the 'Browsers' part of this Readme.  
 
 
 ## Future improvements
