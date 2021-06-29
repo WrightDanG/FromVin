@@ -15,7 +15,6 @@ import os
 from django.contrib.messages import constants as messages
 import dj_database_url
 import django_heroku
-from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -120,12 +119,12 @@ SITE_ID = 1
 # Logs emails to console whilst in dev.
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-# Users can use username or email to login. Change to just email?
+# Users can use username or email to login.
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
-ACCOUNT_USERNAME_MIN_LENGTH = 4  # Remove if only email used.
+ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
@@ -159,13 +158,17 @@ STATICFILES_DIRS = (
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+# Necessary for heroku static files
+django_heroku.settings(locals())
+
 # Media files served in live via Cloudinary
 if 'DEVELOPMENT' not in os.environ:
     CLOUDINARY_STORAGE = {
         'CLOUDINARY_URL': os.getenv('CLOUDINARY_URL', '')
     }
     DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-    IMAGE_URL = 'https://res.cloudinary.com/hytpjm4e2/image/upload/v1624727642/media/'
+    IMAGE_URL = (
+        'https://res.cloudinary.com/hytpjm4e2/image/upload/v1624727642/media/')
 else:
     IMAGE_URL = '/media/'
 
@@ -174,19 +177,28 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
+# Line too long error acknowledged in Readme.md
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        )
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.MinimumLengthValidator',
+        )
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.CommonPasswordValidator',
+        )
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.NumericPasswordValidator',
+        )
     },
 ]
 
@@ -211,13 +223,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.2/howto/static-files/
-
-STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 
 FREE_DELIVERY_THRESHOLD = 75
@@ -248,5 +253,4 @@ else:
 
 DEFAULT_FROM_EMAIL = 'dwrightdevmail@gmail.com'
 
-# Necessary for static files
-django_heroku.settings(locals())
+
