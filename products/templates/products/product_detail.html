@@ -9,11 +9,13 @@
 </div>
 {% endblock %}
 
+<!-- Display product information -->
 {% block content %}
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
+                <!-- Handle lack of image on a product -->
                 {% if product.image %}
                 <a href="{{ product.image.url }}" target="_blank">
                     <img class="card-img-top img-fluid product-detail-img" src="{{ product.image.url }}"
@@ -21,6 +23,7 @@
                 </a>
                 {% else %}
                 <a href="">
+                    <!-- IMAGE_URL needed over MEDIA_URL - explained within Readme.md -->
                     <img class="card-img-top img-fluid product-detail-img" src="{{ IMAGE_URL }}noimage.jpg"
                         alt="{{ product.name }}">
                 </a>
@@ -38,6 +41,7 @@
                     </a>
                 </p>
                 {% endif %}
+                <!-- Allow superusers to edit and delete the product -->
                 {% if request.user.is_superuser %}
                 <small class="ml-3">
                     <a href="{% url 'edit_product' product.id %}">Edit</a> |
@@ -49,6 +53,7 @@
                     {% csrf_token %}
                     <div class="form-row">
                         <div class="col-12">
+                            <!-- Quantity selector, works in tandem with quantity_input_script.html -->
                             <p class="mt-3"><strong>Quantity:</strong></p>
                             <div class="form-group w-50">
                                 <div class="input-group">

@@ -1,10 +1,8 @@
 from django.db import models
 
-# Create your models here.
-
 
 class Category(models.Model):
-
+    # Django defaults the plural to Categorys
     class Meta:
         verbose_name_plural = 'Categories'
 

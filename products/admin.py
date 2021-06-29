@@ -1,6 +1,9 @@
 from django.contrib import admin
 from .models import Product, Category, TastingProfile
 
+# Register product aspects to be controlled
+# within the admin portal
+
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
@@ -14,12 +17,16 @@ class ProductAdmin(admin.ModelAdmin):
 
     ordering = ('category', 'sku',)
 
+# Register categories
+
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
         'name',
     )
+
+# Register tasting profiles for Recommend app
 
 
 class TastingProfileAdmin(admin.ModelAdmin):

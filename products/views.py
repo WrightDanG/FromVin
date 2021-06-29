@@ -5,11 +5,9 @@ from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm
 from django.contrib.auth.decorators import login_required
-from django.conf import settings
 
-# Create your views here.
-
-# Allow users to get all products, filter products by their category name, or find products that match a search query.
+# Allow users to get all products, filter products by their category name,
+# or find products that match a search query.
 
 
 def all_products(request):
@@ -43,6 +41,7 @@ def all_products(request):
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
+        # Search query 'q' here
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -93,7 +92,8 @@ def add_product(request):
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(
-                request, 'Failed to add product. Please ensure the form is valid.')
+                request, 'Failed to add product. \
+                Please ensure the form is valid.')
     else:
         form = ProductForm()
 
@@ -122,7 +122,8 @@ def edit_product(request, product_id):
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(
-                request, 'Failed to update product. Please ensure the form is valid.')
+                request, 'Failed to update product. \
+                Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
