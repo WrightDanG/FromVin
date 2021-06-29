@@ -451,10 +451,21 @@ Due to time pressures, I have removed the unsafe-inline tag (for security), will
 - Microsoft Edge
 
 
+### Responsiveness
+
+With the inclusion of the mobile navbar from boutique ado, in conjunction with heavy use of built-in bootstrap spacing classes, the content remains mostly centred in the page and stacks well regardless of device. 
+
+The only major difficulty is setting the spacing needed for the page content when the navbar enlarges on smaller devices. This has been handled with media queries.
+
+This has been tested using the following settings on Chrome Developer Tools: Iphone 5, Iphone 6, Pixel 2 XL, iPad, Surface Duo.
 
 ### Testing that Heroku version matches development version.
 
+The Heroku version links very well with GitHub publishes, deploying a new version on each commit which is wonderful functionality. The main difference between the two has been the serving of media files. I'm certain that there is a logical way around the issue, but in order to ensure that images served via cloudinary, uploaded via admin and images that are uploaded straight into cloudinary function, I have had to add a bespoke settings variable and context processor to handle it. 
 
+As such, the production environment is working as required, but it has had a detrimental effect on the images in the local environment. I believe this is primarily down to how Cloudinary adds additional characters to the end of the uploaded images. Should I go through and make everything match, there is a possibility that development images would function once more.
+
+Otherwise, the environments line up well, with the same functionality on both. There was some difficulty in exporting the sqlite database into postgres, but with some effort they eventually lined up. 
 
 
 ## Known issues
