@@ -5,7 +5,7 @@ Find Wines and Cheeses to your taste.
 ## Site Owner Goal
 The site owner is looking to provide a platform for food lovers to purchase wine and cheese. 
 
-If users know what they are looking to purchase, they can do so. For those who do not, they can head to 'recommend', select the type of wine or cheese that they know they like and receive recommendations on what to buy as a pairing.
+If users know what they are looking to purchase, they can do so. For those who do not, they can head to 'recommend', select the type of wine or cheese that they know they like and receive recommendations on what to buy as a pairing. The site owner is also looking to educate the user on pairings, wine tasting amongst other things in order to spread the enthusiam to others, along with driving sales.
 
 
 ## User Stories
@@ -18,6 +18,8 @@ A user will want to be able to do the following:
 - Find out information regarding cheese, wine
 - Find out information regarding cheese and wine pairings
 
+These brief points are expanded upon in the site walkthrough at the end of this Readme. 
+
 
 ## Site Layout
 
@@ -25,7 +27,7 @@ A user will want to be able to do the following:
 
 The layout isn't exactly as I was originally picturing when making the wireframes for this site. Unfortunately time constraints have shifted the scope a little. The guide was originally due to have additional content, with some storyboard style images of wine tasting. As it stands, it has a minor introduction into what you can find at FromVin, followed by a brief overview of the main points of tasting. I also located a wonderful royalty-free flavours image which deserved pride of place on the site. It does still serve the main purpose of being a guide, both to FromVin, and to Wine as something to be appreciated and explored. 
 
-Users are guided to additional information should they want it on the blog section of the site. 
+Users are guided to additional information should they want it on the blog section, where in a real-life setting the FromVin team would prepare up-to-date entries with all manner of information, including new and novel product showcases.  
 
 
 ### Recommendation
@@ -34,35 +36,42 @@ Going forward there are some excellent things that can be done with the recommen
 
 ### Store
 
-I've covered this later in the Readme, but due to this being my only experience with something so large as an e-commerce site, i've leaned quite heavily on the boutique ado project for the store functionality. Hopefully this doesn't detract too much from the fact that the elements are wonderfully fit for purpose. User information storage, stripe implementation and excellent user feedback all comes together to ensure that any user wishing to purchase an item from this store, has as few barriers as possible to do so. 
+I've covered this later in the Readme, but due to this being my only experience with something so large as an e-commerce site, I've leaned quite heavily on the boutique ado project for the store functionality. Hopefully this doesn't detract too much from the fact that the elements are wonderfully fit for purpose. User information storage, stripe implementation and excellent user feedback all comes together to ensure that any user wishing to purchase an item from this store, has as few barriers as possible to do so. 
 
 The items are presented and filtered logically for the user, and they can amend this themselves also. Adding products is simple and feedback is given all along the way. 
 
 ### Account/Profile
 
-Credit has to be given here to the well-roundedness of the Django application. From initial installation alone, the breadth of user-centric control via the built in admin makes dealing with an often complex back-end to a project, relatively simple. 
+Credit has to be given here to the well-roundedness of the Django application. From initial installation alone, the breadth of user-centric control via the built-in admin makes dealing with an often complex back-end to a project, relatively simple. 
 
 
 ## Design Decisions
 
 ### General Design
-As a preface to the aspects that are more bespoke on the site, it needs to be stated that i've leaned quite heavily on the boutique ado project. As the only full ecommerce solution on the course and an ideal example of how to put together a django ecommerce site, it seemed like a natural source of a basis. This was discussed with my stand-in mentor to confirm this would be the case, and was told that it was expected, but should be stated outright here.
+As a preface to the aspects that are more bespoke on the site, it needs to be stated that I've leaned quite heavily on the boutique ado project. As the only full ecommerce solution on the course and an ideal example of how to put together a Django ecommerce site, it seemed like a natural source of a basis. This was discussed with my stand-in mentor to confirm this would be the case, and was told that it was expected, but should be stated outright here.
 
-Otherwise, a fixed top navbar was selected so that a user can utilise the navigation even when midway down hundreds of products. On said navbar, the site has been split into it's shop, a homepage which acts as an informational guide, a recommendation page and a blog for more bespoke information from the site owners.
+Otherwise, a fixed top navbar was selected so that a user can utilise the navigation even when midway down hundreds of products. On said navbar, the site has been split into its shop, a homepage which acts as an informational guide, a recommendation page and a blog for more bespoke information from the site owners.
 
 The colour style of the site was chosen to reflect the products that it showcases, along with hopefully coming across as professional but not ostentatious. 
 
 As mentioned above, the hope is that the recommendation aspect of the site can expand over time. I feel this is what gives a little extra to the site as it gives direction to customers who may not know quite as much about the products as others. 
 
-The blog can be a powerful way to communicate with the users. Being able to present new information in a consistent manner was the reason for it's inclusion, and whilst most of the current information is just a sample - the potential of it speaks to it's inclusion. 
+The blog can be a powerful way to communicate with the users. Being able to present new information in a consistent manner was the reason for its inclusion, and whilst most of the current information is just a sample - the potential of it speaks to its inclusion. 
+
+Whilst the blog has models that were not seen in the code institute projects, I am aware that two are required under this project. The recommendation app was filling this niche during development, however once the functionality was in and working, the code was more suited to forms.py. It is my sincere hope that I am not penalised for ensuring the code sits in a logical place in the final completed project.
 
 
 ### Data Specific Design
 
+Probably the largest move away from the projects so far was the goal to utilise a different service to serve media and static files. I am aware that AWS is the standard but the goal was to use something other, plus I had seen that some users were being charged by Amazon with no warning. As such I located Cloudinary. It was a good learning experience setting up the service, however I cannot say that it was straightforward. 
+
+Otherwise, Django makes storing data really very simple. I preferred the access of MongoDB and found using both sqllite and Postgres to be quite limiting in this regard. The transition between the two was especially difficult with my custom products. 
+
+Those hurdles were leaped however, and I can see the positives and negatives to both aspects. Setting up and managing the amount of data in this project with Mongo would be troublesome and time consuming. Django on the other hand, in conjunction with the Code Institute guides made for a more user-friendly experience. 
 
 #### Database Schema
 
-The following was made with Creately. The postgres database viewer on Heroku is unfortunately quite limited, so some estimates have been made as to the relationships between some of these tables. In addition, the social tables have been created, but wouldn't be utilised until additional work is made on the project.
+The following was made with Creately. The Postgres database viewer on Heroku is unfortunately quite limited, so some estimates have been made as to the relationships between some of these tables. In addition, the social tables have been created, but wouldn't be utilised until additional work is made on the project.
 
 ![database schema](https://user-images.githubusercontent.com/61311614/123555148-d1753200-d77b-11eb-840a-9ef8ffd979f2.png)
 
@@ -150,8 +159,8 @@ Checkout Page
 The [HTML Validator](https://validator.w3.org/) picked up several issues, such as:
 
 - the 'rel' link for the android favicon did not have the term 'icon' in it. This was addressed.
-- the 'li' items in the navigation threw an error as being ouside of an 'ul' element. this turned out to be a missing <ul> tag in mobile_top_header and was resolved.
-- there is a 'type' warning for a javascript resource, this was in the quantity adjustment script and was removed. This actually appeared in several applications such as checkout and products. 
+- the 'li' items in the navigation threw an error as being outside of an 'ul' element. this turned out to be a missing `<ul>` tag in mobile_top_header and was resolved.
+- there is a 'type' warning for a Javascript resource, this was in the quantity adjustment script and was removed. This actually appeared in several applications such as checkout and products. 
 
 I then got to a stage where sign in was needed, so proceeded to copy and paste HTML across into the validator for page such as checkout/checkout_success.html. The validator objected to the python template text primarily, but was otherwise fine.
 
@@ -176,7 +185,7 @@ On a quick search of the [forums](https://www.sitepoint.com/community/t/css-vali
 
 The [Javascript Validator](https://jshint.com/) primarily located several missing semi-colons - these were all added.
 
-In adddition, the following was noted:
+In addition, the following was noted:
 
 - Template literal syntax is only supported on some versions - this should be fine for our purposes.
 ![image](https://user-images.githubusercontent.com/61311614/123812105-b9242500-d8eb-11eb-8537-4dac1a7666d3.png)
@@ -188,7 +197,7 @@ Otherwise there were no further errors - only warnings regarding utilisation of 
 
 As a preface, I did not check the built-in migration files and the like, as there isn't much I can really do about any errors within them.
 
-Regarding the aspects that can be controlled, I have to say that the gitpod built-in linter was excellent. I recall on the previous project having hundreds of errors, primarily regarding line length. The linter within gitpod allowed these to be addressed within the IDE and validated on the spot. As such, the [Python Validator](http://pep8online.com/) found...
+Regarding the aspects that can be controlled, I have to say that the Gitpod built-in linter was excellent. I recall on the previous project having hundreds of errors, primarily regarding line length. The linter within Gitpod allowed these to be addressed within the IDE and validated on the spot. As such, the [Python Validator](http://pep8online.com/) found:
 
 - Trailing whitespace in checkout/models.py
 
@@ -243,17 +252,32 @@ Unfortunately I have not been able to write a suite of automated test cases for 
 One of the main redundancies that was taught in in the Code Institute course in reference to an e-commerce site, is a backup for payments should the form not submit. I've carried these redundancies over into this project and have tested here by removing the form.submit() call in stripe_elements.js. The webhook successfully substitutes in and allows the payment to complete.
 
 
-In addition, a combination of django built in validation, stripe authentication and redundancies in the views means that most of the vulnerabilities you would see in a site like this are handled. For example:
+In addition, a combination of Django built in validation, stripe authentication and redundancies in the views means that most of the vulnerabilities you would see in a site like this are handled. For example:
+
+A user is informed when login details are entered incorrectly
 
 ![image](https://user-images.githubusercontent.com/61311614/123861010-90695300-d91e-11eb-9743-04d93d5fd550.png)
 
+(Note the URL) should someone without appropriate permissions attempts to access a delete URL - they are directed to the Sign In page.
+
 ![image](https://user-images.githubusercontent.com/61311614/123861167-c27ab500-d91e-11eb-8baf-dd17d811d57d.png)
+
+The same applies for the Edit page, for products.
 
 ![image](https://user-images.githubusercontent.com/61311614/123861229-d9210c00-d91e-11eb-8a42-8497c0f00430.png)
 
+Django handles validation for existing users as expected, in a robust manner.
+
 ![image](https://user-images.githubusercontent.com/61311614/123861324-f1912680-d91e-11eb-8b42-c2ffadc291d6.png)
 
+When it comes to payments, stripe has test cards which give validation options. Should these succeed then the payment goes through.
+
 ![image](https://user-images.githubusercontent.com/61311614/123861528-31f0a480-d91f-11eb-988b-582fdbf7a7c2.png)
+
+Should this fail however, the user is directed back and informed.
+
+
+I believe the majority of eventualities are handled within the project. The overriding thought is to ensure that should something occur, wrong or right, the user is appropriately informed as to what or why. 
 
 ![image](https://user-images.githubusercontent.com/61311614/123861565-3c12a300-d91f-11eb-9a8a-c1ec2e51703c.png)
 
@@ -281,9 +305,9 @@ Shop - should lead to the products page - confirmed.
 
 My Account (Logged Out) - Should be presented with a dropdown showing 'Register' and 'Login' - confirmed.
 
-Register - should lead to the signup page - confirmed. 
+Register - should lead to the Sign up page - confirmed. 
 
-Login - should lead to the signin page - confirmed.
+Login - should lead to the Sign in page - confirmed.
 
 My Account (Logged In) - should be presented with a dropdown showing 'My Profile' and 'Logout' - confirmed.
 
@@ -476,36 +500,36 @@ With the inclusion of the mobile navbar from boutique ado, in conjunction with h
 
 The only major difficulty is setting the spacing needed for the page content when the navbar enlarges on smaller devices. This has been handled with media queries.
 
-This has been tested using the following settings on Chrome Developer Tools: Iphone 5, Iphone 6, Pixel 2 XL, iPad, Surface Duo.
+This has been tested using the following settings on Chrome Developer Tools: iPhone 5, iPhone 6, Pixel 2 XL, iPad, Surface Duo.
 
 ### Testing that Heroku version matches development version.
 
-The Heroku version links very well with GitHub publishes, deploying a new version on each commit which is wonderful functionality. The main difference between the two has been the serving of media files. I'm certain that there is a logical way around the issue, but in order to ensure that images served via cloudinary, uploaded via admin and images that are uploaded straight into cloudinary function, I have had to add a bespoke settings variable and context processor to handle it. 
+The Heroku version links very well with GitHub publishes, deploying a new version on each commit which is wonderful functionality. The main difference between the two has been the serving of media files. I'm certain that there is a logical way around the issue, but in order to ensure that images served via Cloudinary, uploaded via admin and images that are uploaded straight into Cloudinary function, I have had to add a bespoke settings variable and context processor to handle it. 
 
 As such, the production environment is working as required, but it has had a detrimental effect on the images in the local environment. I believe this is primarily down to how Cloudinary adds additional characters to the end of the uploaded images. Should I go through and make everything match, there is a possibility that development images would function once more.
 
-Otherwise, the environments line up well, with the same functionality on both. There was some difficulty in exporting the sqlite database into postgres, but with some effort they eventually lined up. 
+Otherwise, the environments line up well, with the same functionality on both. There was some difficulty in exporting the sqlite database into Postgres, but with some effort they eventually lined up. 
 
 
 ## Known issues
-- I had a little trouble with wrapping my head around static files and django. I made a little workaround for images that were not uploaded via admin, such as the flavour wheel. This does not represent best practice amongst the way it was handled
+- I had a little trouble with wrapping my head around static files and Django. I made a little workaround for images that were not uploaded via admin, such as the flavour wheel. This does not represent best practice amongst the way it was handled
 - As such, the favicon will only show on pages where the image link has been passed into the context. This does not feel like best practice and perhaps a custom context processor for this would have been much better to make it available sitewide. Update: Information found in the Django documentation suggested that Django supports the MEDIA_URL setting sitewide, so images were updated to utilise this however it caused complications with the product images. A custom context processor was then added to address this. 
 - On loading images to Cloudinary, they did not keep their original names, which means they are not found locally. Renaming the local versions, or the Cloudinary hosted versions would fix this. 
-- Despite having the site set on admin as 'FromVin', the password emails still appear to use 'example.com'
 - the db.json export should not really have been added to the git repository. On checking, all the passwords were hashed but even so, database copies with personal details should not be available. 
 - Gitpod states that several objects within views do not have an 'objects' attribute, this appears to be incorrect as the code functions correctly. 
 - This is also true for 'lineitems' within checkout/models.py
-- On removing size from checkout/models.py - the port refuses to open. This may be migration related.
-- Line length error in settings.py (password validation settings) has been left, as readability has been prioritised.
+- On removing the un-needed size attribute from checkout/models.py - the local port refuses to open. This may be migration related but nothing seems to appear in migrations.
+- Line length error in settings.py (password validation settings) has been left, as readability has been prioritised. In addition, altering those line lengths detrimentally affected the password reset process.
 - Decouple removed from settings but not from requirements.txt.
-- There is a content security policy error on firefox due to the use of inline javascript. The JS has been left due to time pressures, but the reasoning and research has all been explained under the 'Browsers' part of this Readme.  
+- There is a content security policy error on Firefox due to the use of inline Javascript. The JS has been left due to time pressures, but the reasoning and research has all been explained under the 'Browsers' part of this Readme.  
 
 
 ## Future improvements
 - A validation message should be present on the Delete option for products. Even better would be an 'Undo' option, as this will allow for repairing of mistakes and less impactful mass-deletions, should they be necessary through the GUI. 
-- Make tasting profile less of a magic number
-- Thoroughly research the pairings, they currently are arbitary and could be more tailored. 
+- Make tasting profile less of a magic number. Expand it into tasting notes and expand products into their individual flavours in order to take advantage of it.
+- Thoroughly research the pairings, they currently are slightly arbitrary and could be more tailored. 
 - Make amendments to secondary action buttons. From a UX perspective, whilst they may look good, my concern is that a user may click the wrong one by accident. 
+- Add tailored pairings to the users account based on their recommendations, or purchase history. 
 
 ## Deployment Procedure
 
@@ -518,13 +542,13 @@ Starting a project such as this using the chosen IDE, in this case Gitpod.io is 
 - Start a new project using `django-admin startproject {enter site name here}`
 - From this point, apps can begin to be created as needed using `python3 manage.py startapp {enter app name here}`
 - A database is created by default, but any changes to models will require migrations. These can be prepared with `python3 manage.py makemigrations`, followed by `python3 manage.py migrate` once you have confirmed these to be correct. The `--plan` and `--dry-run` tags are advised to be used in confirming this (see Django [documentation](https://docs.djangoproject.com/en/3.2/ref/django-admin/) for more details).
-- Create a .gitignore file so that sensitive data (database, settings) is not stored publically on git.
+- Create a .gitignore file so that sensitive data (database, settings) is not stored publicly on git.
 - Create a requirements.txt file, which lists the dependencies of the project. The command for this is `pip3 freeze > requirements.txt`
 - Create a Procfile (spelt exactly like this), which sets where the application should commence. For Django, it's usual to install a program by the name of 'Gunicorn' to assist with this. This is primarily used for live deployment, but is a good habit to get into. The command is `pip3 install gunicorn` and the Procfile content should be `web: gunicorn {insert project name}.wsgi`.
 
 From here, running the app via your IDE will start up a version of the application that can be viewed, and built upon. The command for this in Gitpod is `python3 manage.py runserver`.
 
-In this particular project, the local site cannot be found at a consistent web address as it is based on the workspace instance, which for gitpod is a sequence of random words.
+In this particular project, the local site cannot be found at a consistent web address as it is based on the workspace instance, which for Gitpod is a sequence of random words.
 
 
 ### Cloning this exact project
@@ -536,7 +560,7 @@ In this particular project, the local site cannot be found at a consistent web a
 - The first two options will launch the respective clients (if installed) where you can trigger a clone operation.
 - The last option allows you to copy+paste/drag+drop physical copies of the code into your respective IDE. You will need to extract the data first most likely. This requires more manual work but is an equally valid way to clone the project for local use. 
 
-You may note that on the above image, there is a 'GitPod' option. This is due to the GitPod extension installed on my browser. If the user were to also do this (tested working on Chrome and Firefox), log into their respective gitpod account and click this button, they would be able to launch an instance of this project also.
+You may note that on the above image, there is a 'GitPod' option. This is due to the GitPod extension installed on my browser. If the user were to also do this (tested working on Chrome and Firefox), log into their respective Gitpod account and click this button, they would be able to launch an instance of this project also.
 
 ### Deployment via Heroku
 
@@ -546,7 +570,7 @@ Getting Heroku to deploy a version of this project is incredibly simple. The bel
 - Confirm that the Procfile has been successfully created per the 'local' instructions above. Heroku will require this for a live deployment.
 - Create a Heroku Login.
 - Create a Heroku application - it must have a unique name.
-- Install heroku into your project via command line (pip3 install django-heroku)
+- Install Heroku into your project via command line (pip3 install django-heroku)
 - Under 'Deploy', click 'Connect to GitHub' and link it to the repository.
 - Under 'Settings', 'Reveal Config Vars' and add your IP, Port, Secret Key and stripe details.
 - Back under 'Deploy', 'Enable Automatic Deploys' can be now be selected so the project will deploy every time there is a new GitHub commit.
@@ -577,14 +601,14 @@ I chose [Cloudinary](https://cloudinary.com/) as a provider for media files, pri
 
 The following steps were taken:
 
-- Navigate to 'Add-ons' once within your heroku project, on the heroku portal
+- Navigate to 'Add-ons' once within your Heroku project, on the Heroku portal
 - Search for 'Cloudinary'
-- Click install, and enter heroku payment details if required. Choose the free version however, the payment details should not be needed to be used. 
-- Install both cloudinary and whitenoise into the project via console command (pip3 install cloudinary django-cloudinary-storage whitenoise)
+- Click install, and enter Heroku payment details if required. Choose the free version however, the payment details should not be needed to be used. 
+- Install both Cloudinary and Whitenoise into the project via console command (pip3 install cloudinary django-cloudinary-storage whitenoise)
 - Ensure the requirements are added to requirements.txt (pip3 freeze > requirements.txt)
 - Ensure they are added to installed apps in settings.py
 - Add the following to middleware to support Whitenoise 'whitenoise.middleware.WhiteNoiseMiddleware'
-- The cloudinary portal will have a url with the needed keys. This url can be added to heroku settings and accessed via settings.py. 
+- The Cloudinary portal will have a url with the needed keys. This url can be added to Heroku settings and accessed via settings.py. 
 Personally, I have been using dj_database for database settings and have used the following to get the postgres database to link up: 'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 
 Static files locations can be set in settings.py - the code from this project is as follows:
@@ -608,7 +632,7 @@ CLOUDINARY_STORAGE = {
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 IMAGE_URL = # Custom cloudinary url
 
-Generally speaking that additional IMAGE_URL setting should not be necessary, but I personally had a little trouble with serving some specific media files, so used this as a solution. The other settings allow cloudinary to serve media files and whitenoise to serve the other static files and barring any issues, the live site should now match the local site.
+Generally speaking that additional IMAGE_URL setting should not be necessary, but I personally had a little trouble with serving some specific media files, so used this as a solution. The other settings allow Cloudinary to serve media files and Whitenoise to serve the other static files and barring any issues, the live site should now match the local site.
 
 
 
@@ -626,7 +650,7 @@ Whilst the site is meant to look clean and professional, I couldn't resist addin
 
 ![Screenshot_3](https://user-images.githubusercontent.com/61311614/123704380-7fa4d880-d85d-11eb-95d3-313e3b7f7e87.png)
 
-I've addressed elsewhere in this readme that the guide was intended to be bigger, but this small summary section is meant to promote a sense of cameraderie between FromVin, and the user. In future it would cap off the end of a more thorough tasting guide.
+I've addressed elsewhere in this readme that the guide was intended to be bigger, but this small summary section is meant to promote a sense of camaraderie between FromVin, and the user. In future it would cap off the end of a more thorough tasting guide.
 
 ![Screenshot_4](https://user-images.githubusercontent.com/61311614/123704382-80d60580-d85d-11eb-8d3e-2663ad21b853.png)
 
@@ -671,7 +695,7 @@ The user is able to utilise the sort function to manipulate the order of the pro
 ![Screenshot_14](https://user-images.githubusercontent.com/61311614/123704406-859ab980-d85d-11eb-884e-e4b7ed40ac2a.png)
 ![Screenshot_15](https://user-images.githubusercontent.com/61311614/123704411-86335000-d85d-11eb-8ce3-913f3ad21446.png)
 
-The suberb dropdown category list has also been carried over from the boutique ado project. This allows the user to filter the products down by category for a tailored shopping experience. 
+The superb dropdown category list has also been carried over from the boutique ado project. This allows the user to filter the products down by category for a tailored shopping experience. 
 
 ![Screenshot_16](https://user-images.githubusercontent.com/61311614/123704413-86cbe680-d85d-11eb-9899-abe3c7cc2fd5.png)
 ![Screenshot_17](https://user-images.githubusercontent.com/61311614/123704415-87647d00-d85d-11eb-958d-eb86f79d60e0.png)
@@ -696,7 +720,7 @@ Also note that under 'My Account', no account details are yet present, due to th
 
 ![Screenshot_22](https://user-images.githubusercontent.com/61311614/123704425-89c6d700-d85d-11eb-937c-330a4d21ef37.png)
 
-On sign up, django has a built-in verification process, where the user is sent an email seeking confirmation that the email is correct and active.
+On sign up, Django has a built-in verification process, where the user is sent an email seeking confirmation that the email is correct and active.
 
 ![Screenshot_23](https://user-images.githubusercontent.com/61311614/123704427-89c6d700-d85d-11eb-8334-8fb9f47433c3.png)
 
@@ -785,7 +809,7 @@ Once again, feedback is presented in a pleasant way.
 
 ![Screenshot_45](https://user-images.githubusercontent.com/61311614/123704475-8f242180-d85d-11eb-9e69-4e30b1253fe5.png)
 
-Should that user be mamrked as an admin, there is additional functionality available. For a start there is a 'Product Management' section that is unavailable to users without appropriate permissions.
+Should that user be marked as an admin, there is additional functionality available. For a start there is a 'Product Management' section that is unavailable to users without appropriate permissions.
 
 ![Screenshot_46](https://user-images.githubusercontent.com/61311614/123706795-a7e20680-d860-11eb-9da2-84b6cc257939.png)
 
@@ -823,14 +847,48 @@ Adding or changing then becomes as simple as inserting your content and clicking
 
 ## Conclusion
 
-In my opinion, the journey...
+In my opinion, the journey fulfils the user stories in the following way:
 
- On a personal note, this course has been a superb experience. The intention was to utilise it to kickstart a career in software development and it has been successful in this regard already. For this reason, amongst others, I have had much less time available than I would want to do this final project justice. The idea is sound, the execution would have been well served by another couple of weeks of clear time to work on it. 
+#### Browse wine and cheese products
+
+The user is readily able to do this and is able to access products from a multitude of different places. Content for these has been filled out and is available to a site visitor.
+
+#### Add wanted products to a basket
+
+This functionality works, and the user is kept informed of the success of this via messages, and represented by the updated bag button sitewide.
+
+#### Order and pay for said products to a stated delivery address
+
+The stripe integration is present and working, with redundancy code to ensure that transactions go through despite most potential checkout errors.
+
+#### Create a user account
+
+Whilst a guest is able to check out, the storage of delivery data within the account, plus access to previous order histories should give enough incentive for an account to be registered. They are able to do so should they want to.
+
+#### Access previous orders through said user account
+
+This functionality is present and working.
+
+#### Find out information regarding cheese, wine
+
+Between the guide and the blog applications, the platform is there for as much or as little information as the site owner sees fit to include. Representational data has been placed here to showcase this.
+
+#### Find out information regarding cheese and wine pairings
+
+The Recommendation application is present and working. Admittedly it is smaller in scope than hoped for, but is present to be built upon.
+
+
+Based on the above, I believe that the user stories have been met with the journey laid out. 
+
+On a personal note, this course has been a superb experience. The intention was to utilise it to kickstart a career in software development and it has been successful in this regard already. For this reason, amongst others, I have had much less time available than I would want to do this final project justice. The idea is sound, the execution would have been well served by another couple of weeks of clear time to work on it. I've done my utmost to state my reasonings for design decisions within this readme, and sincerely hope that I've done enough both here and in my other projects to emphasise the journey that it's led me on across the last year. 
+
+My thanks go to Can as a mentor throughout, and Gerry who stood in for the initial consultation on this project. If this project had not come down to the last day then I would have appreciated the opportunity to utilise their expertise again. Also thanks to Code Institute for the step by step guide to Development.
 
 
 ## Attribution
+- Primary credit goes to the Boutique Ado project, of which a majority of the store functionality is inherited from.
 - External links to wine tasting guides found at the [WineFolly](https://winefolly.com/) resource. 
-- Assistance with adding django messages found at [Ordinarycoders.com](https://www.ordinarycoders.com/blog/article/django-messages-framework)
+- Assistance with adding Django messages found at [Ordinarycoders.com](https://www.ordinarycoders.com/blog/article/django-messages-framework)
 - Assistance with deploying static files with heroku found at [dev.to](https://dev.to/developerroad/tutorial-deploying-a-django-app-on-heroku-4k6o) 
 - Images resized for deployment using [Resizeimage.net](https://resizeimage.net/)
 - Addition of select form assistance using [GeeksforGeeks](https://www.geeksforgeeks.org/choicefield-django-forms/)
