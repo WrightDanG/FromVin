@@ -147,29 +147,64 @@ Checkout Page
 
 #### HTML
 
-The HTML Validator picked up several issues, such as:
+The [HTML Validator](https://validator.w3.org/) picked up several issues, such as:
 
 - the 'rel' link for the android favicon did not have the term 'icon' in it. This was addressed.
+- the 'li' items in the navigation threw an error as being ouside of an 'ul' element. this turned out to be a missing <ul> tag in mobile_top_header and was resolved.
+- there is a 'type' warning for a javascript resource, this was in the quantity adjustment script and was removed. This actually appeared in several applications such as checkout and products. 
 
+I then got to a stage where sign in was needed, so proceeded to copy and paste HTML across into the validator for page such as checkout/checkout_success.html. The validator objected to the python template text primarily, but was otherwise fine.
+
+![image](https://user-images.githubusercontent.com/61311614/123807424-bd4e4380-d8e7-11eb-984a-a09c0d379d8a.png)
+
+Eventually, all errors save for the python templates were resolved.
+![image](https://user-images.githubusercontent.com/61311614/123807991-41a0c680-d8e8-11eb-888a-969b32090f77.png)
 
 
 #### CSS
 
+The [CSS Validator](https://jigsaw.w3.org/css-validator/) picked up primarily issues with the bootstrap css, which is expected behaviour by now. 
 
+There was one further one, that a webkit control is an unknown vendor extension:
+
+![image](https://user-images.githubusercontent.com/61311614/123809153-474adc00-d8e9-11eb-9848-c37e6fe7217e.png)
+
+On a quick search of the [forums](https://www.sitepoint.com/community/t/css-validation-unknown-vendor-extensions/125616), this is another error akin to the bootstrap ones, where the validator doesn't recognise it, but it is not necessarily incorrect. As such, the code was left intact. 
 
 
 #### JavaScript
 
+The [Javascript Validator](https://jshint.com/) primarily located several missing semi-colons - these were all added.
 
+In adddition, the following was noted:
+
+- Template literal syntax is only supported on some versions - this should be fine for our purposes.
+![image](https://user-images.githubusercontent.com/61311614/123812105-b9242500-d8eb-11eb-8537-4dac1a7666d3.png)
+- 'let' is again only supported on some versions, but should be fine for our purposes.
+
+Otherwise there were no further errors - only warnings regarding utilisation of the '$' tag of JQuery, which again is fine. 
 
 #### Python
 
+I have to say that the gitpod built-in linter was excellent. I recall on the previous project having hundreds of errors, primarily regarding line length. The linter within gitpod allowed these to be addressed within the IDE and validated on the spot. As such, the [Python Validator](http://pep8online.com/) found...
 
+- Trailing whitespace in checkout/models.py
+
+![image](https://user-images.githubusercontent.com/61311614/123814396-90049400-d8ed-11eb-8b59-079c364b719c.png)
+
+- Line too long in settings.py - I've decided to leave this particular one, as splitting it up will actually reduce readability, (as it's just long dot notation so should ideally be inline) instead of increasing it in my opinion. The PEP8 syntax rules being all about ease of reading makes me think that this is the correct decision.
+- The blank line at the end of the file was removed.
+
+![image](https://user-images.githubusercontent.com/61311614/123817459-1621da00-d8f0-11eb-91d6-1ebc42f1f440.png)
 
 #### Wave(WebAIM) validator
 
+Generally at this stage I would have a thorough review of the UX principles of my project, as I strongly feel that user experience is key. Unfortuately on this occasion I have only had time to hold a minor review, but recommend the service completely, and have found it's value in previous projects. 
+
+One thing I will raise from a UX side as a self criticism - I really like the button design and colouring throughout the site. I do however readily admit that proceed and cancel buttons next to each other of the same colour is not ideal, and would find something that looks equally good, but is more distinct in future.
 
 
+![image](https://user-images.githubusercontent.com/61311614/123817196-dbb83d00-d8ef-11eb-8f69-722121a66399.png)
 
 #### Internal custom validation
 Note for future - code to disable form and test webhooks can be found in BA profile video 9, at the end. form.submit in stripe_elements.js.

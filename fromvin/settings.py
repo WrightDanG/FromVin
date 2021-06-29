@@ -252,5 +252,3 @@ else:
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 
 DEFAULT_FROM_EMAIL = 'dwrightdevmail@gmail.com'
-
-

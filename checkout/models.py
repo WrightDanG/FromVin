@@ -84,7 +84,7 @@ class OrderLineItem(models.Model):
     # Requires removal but seems to prevent the site from loading.
     # Perhaps migration related as amendment to model.
     product_size = models.CharField(
-        max_length=2, null=True, blank=True)  
+        max_length=2, null=True, blank=True)
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(
         max_digits=6, decimal_places=2, null=False,
