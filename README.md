@@ -147,6 +147,9 @@ Checkout Page
 
 #### HTML
 
+The HTML Validator picked up several issues, such as:
+
+- the 'rel' link for the android favicon did not have the term 'icon' in it. This was addressed.
 
 
 
