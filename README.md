@@ -195,6 +195,11 @@ Note for future - code to disable form and test webhooks can be found in BA prof
 - On loading images to Cloudinary, they did not keep their original names, which means they are not found locally. Renaming the local versions, or the Cloudinary hosted versions would fix this. 
 - Despite having the site set on admin as 'FromVin', the password emails still appear to use 'example.com'
 - the db.json export should not really have been added to the git repository. On checking, all the passwords were hashed but even so, database copies with personal details should not be available. 
+- Gitpod states that several objects within views do not have an 'objects' attribute, this appears to be incorrect as the code functions correctly. 
+- This is also true for 'lineitems' within checkout/models.py
+- On removing size from checkout/models.py - the port refuses to open. This may be migration related.
+- Line length error in settings.py (password validation settings) has been left, as readability has been prioritised.
+- Decouple removed from settings but not from requirements.txt.
 
 
 ## Future improvements

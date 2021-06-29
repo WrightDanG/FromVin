@@ -32,7 +32,7 @@
     <hr class="block-divider block-divider-bottom-margin">
     <div class="container about-container text-center">
         <div class="row">
-            <!--Step 1 - Find colour -->
+            <!--Step 1 - Have cheeses or wines recommended -->
             <div class="col-md-4">
                 <i class="details-icon fas fa-question-circle"></i>
                 <p>Visit our Recommendation Page</p>
@@ -40,7 +40,7 @@
                 </p>
                 <a href="{% url 'recommendation' %}" class="btn btn-primary">Recommend</a>
             </div>
-            <!--Step 2 - Enter details -->
+            <!--Step 2 - Shop in the store -->
             <div class="col-md-4">
                 <i class="details-icon fas fa-wine-bottle"></i>
                 <p>Peruse the Shop</p>
@@ -48,7 +48,7 @@
                     fancy.</p>
                 <a href="{% url 'products' %}" class="btn btn-primary">Shop</a>
             </div>
-            <!--Contact CTA -->
+            <!-- Step 3 - View the blog for more information -->
             <div class="col-md-4">
                 <i class="details-icon fas fa-clipboard-check"></i>
                 <p>Take a look at our Blog</p>
@@ -69,7 +69,7 @@
 
     <div class="container about-container text-center">
         <div class="row">
-            <!--Step 1 - Find colour -->
+            <!-- Wine tasting Step 1 - Visual -->
             <div class="col-md-3">
                 <i class="details-icon fas fa-eye"></i>
                 <p>Step 1</p>
@@ -81,7 +81,7 @@
                     where a deep colour may lead you to expect a rich, earthy or mineraly note.</p>
                 <p>Excess wine running down the sides of the glass are known as the 'legs'</p>
             </div>
-            <!--Step 2 - Enter details -->
+            <!-- Wine tasting Step 2 - Aroma -->
             <div class="col-md-3">
                 <i class="details-icon fas fa-tint"></i>
                 <p>Step 2</p>
@@ -96,7 +96,7 @@
                     as
                     you move your nose away from the glass, you can be assured that the wine has quality to it. </p>
             </div>
-            <!--Contact CTA -->
+            <!-- Wine tasting Step 3 - Taste -->
             <div class="col-md-3">
                 <i class="details-icon fas fa-glass-cheers"></i>
                 <p>Step 3</p>
@@ -111,7 +111,7 @@
                     flavours and the scent together and try to pull out what kinds of flavour notes you can find.
                 </p>
             </div>
-            <!--Contact CTA -->
+            <!-- Wine tasting Step 4 - Assess -->
             <div class="col-md-3">
                 <i class="details-icon fas fa-thumbs-up"></i>
                 <p>Step 4</p>
@@ -127,6 +127,7 @@
         </div>
     </div>
 
+    <!-- Wine wheel section -->
     <div class="row">
         <div class="col">
             <hr>
@@ -139,11 +140,13 @@
         <div class="col text-center">
             <p>Below you can see the huge range of incredible flavours that you can try to seek out in your tasting
                 adventure!</p>
+            <!-- Image credit to Wikimedia Commons -->
             <img class="img-fluid wine-wheel-image" src="{{ IMAGE_URL }}wine_wheel.jpg" alt="Flavour Wheel">
             <hr>
         </div>
     </div>
 
+    <!-- Cheers section -->
     <div class="row">
         <div class="col">
             <h3 class="text-center"> Summary </h3>
@@ -152,6 +155,7 @@
                 but
                 for more information take a look at our blog posts! Until then, happy tasting, and...</p>
             <h3 class="text-center mb-5"> Cheers! </h3>
+            <!-- Image credit to photostockeditor -->
             <img class="img-fluid" src="{{ IMAGE_URL }}cheers.jpg" alt="Cheers, from FromVin!">
             <hr class="block-divider block-divider-bottom-margin">
         </div>
