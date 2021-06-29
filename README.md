@@ -186,7 +186,9 @@ Otherwise there were no further errors - only warnings regarding utilisation of 
 
 #### Python
 
-I have to say that the gitpod built-in linter was excellent. I recall on the previous project having hundreds of errors, primarily regarding line length. The linter within gitpod allowed these to be addressed within the IDE and validated on the spot. As such, the [Python Validator](http://pep8online.com/) found...
+As a preface, I did not check the built-in migration files and the like, as there isn't much I can really do about any errors within them.
+
+Regarding the aspects that can be controlled, I have to say that the gitpod built-in linter was excellent. I recall on the previous project having hundreds of errors, primarily regarding line length. The linter within gitpod allowed these to be addressed within the IDE and validated on the spot. As such, the [Python Validator](http://pep8online.com/) found...
 
 - Trailing whitespace in checkout/models.py
 
@@ -197,14 +199,36 @@ I have to say that the gitpod built-in linter was excellent. I recall on the pre
 
 ![image](https://user-images.githubusercontent.com/61311614/123817459-1621da00-d8f0-11eb-91d6-1ebc42f1f440.png)
 
+The remainder of the Python code received the 'All Right' status:
+
+![image](https://user-images.githubusercontent.com/61311614/123820461-86315f80-d8f2-11eb-9e6a-cb08c03ccf5d.png)
+
 #### Wave(WebAIM) validator
 
-Generally at this stage I would have a thorough review of the UX principles of my project, as I strongly feel that user experience is key. Unfortuately on this occasion I have only had time to hold a minor review, but recommend the service completely, and have found it's value in previous projects. 
+In previous projects, I have found value in a UX validator called [WebAim Wave](https://wave.webaim.org/). This site assesses accessibility for users who may require screen readers, or struggle with contrast against elements. 
 
-One thing I will raise from a UX side as a self criticism - I really like the button design and colouring throughout the site. I do however readily admit that proceed and cancel buttons next to each other of the same colour is not ideal, and would find something that looks equally good, but is more distinct in future.
+Prior to running the site through, one thing I will raise from a UX side as a self criticism - I really like the button design and colouring throughout the site. I do however readily admit that proceed and cancel buttons next to each other of the same colour is not ideal, and would find something that looks equally good, but is more distinct in future.
 
+On running the validator, most aspects are positive however a couple of negatives are apparent:
+
+- There are missing aria elements on the search box. Aria-label additions resolve this well. 
+- The contrast between the black header links and the deep red navbar is 'Very Low'
+
+![image](https://user-images.githubusercontent.com/61311614/123821796-9d248180-d8f3-11eb-85a8-f007713788dc.png)
+
+In regards to the latter issue, there are two ways to deal with it, choose a lighter colour for the navbar, or for the links. 
+
+For the navbar, increasing the lightness so that the contrast validator passes gives the following:
 
 ![image](https://user-images.githubusercontent.com/61311614/123817196-dbb83d00-d8ef-11eb-8f69-722121a66399.png)
+
+Personally, I am not a fan of this and feel that it detracts from the overall look of the site. 
+
+The other option is as follows:
+
+![image](https://user-images.githubusercontent.com/61311614/123828001-03f86980-d8f9-11eb-8956-c23cbe177447.png)
+
+Whilst I still prefer the black icons, the white is much preferable to the lighter navbar in my opinion.
 
 #### Internal custom validation
 Note for future - code to disable form and test webhooks can be found in BA profile video 9, at the end. form.submit in stripe_elements.js.

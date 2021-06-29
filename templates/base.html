@@ -65,9 +65,10 @@
                 <!-- Search box submission form -->
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-50 d-sm-none d-none d-md-flex">
-                        <input class="form-control border border-black" type="text" name="q" placeholder="Search">
+                        <input class="form-control border border-black" type="text" name="q" placeholder="Search"
+                            aria-label="Enter Search Term">
                         <div class="input-group-append">
-                            <button class="form-control btn border border-black" type="submit">
+                            <button class="form-control btn border border-black" type="submit" aria-label="Search">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
@@ -80,7 +81,7 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="content-options" data-toggle="dropdown"
+                        <a class="text-white nav-link" href="#" id="content-options" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-book-open fa-lg"></i></div>
@@ -98,7 +99,7 @@
                     </li>
                     <!-- Store link -->
                     <li class="list-inline-item">
-                        <a class="text-black nav-link" href="{% url 'products' %}">
+                        <a class="text-white nav-link" href="{% url 'products' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-wine-bottle fa-lg"></i></div>
                                 <p class="my-0">Shop</p>
@@ -107,7 +108,7 @@
                     </li>
                     <!-- Account link -->
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link d-sm-none d-none d-md-block" href="#" id="user-options"
+                        <a class="text-white nav-link d-sm-none d-none d-md-block" href="#" id="user-options"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-id-card fa-lg"></i></div>
@@ -130,7 +131,7 @@
                     </li>
                     <!-- Display plain basket, or coloured basket with correct total price if basket items exist -->
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}basket-icon text-info{% else %}text-black{% endif %} nav-link d-sm-none d-none d-md-block"
+                        <a class="{% if grand_total %}basket-icon text-info{% else %}text-white{% endif %} nav-link d-sm-none d-none d-md-block"
                             href="{% url 'view_bag' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-basket fa-lg"></i></div>

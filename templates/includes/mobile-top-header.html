@@ -12,9 +12,10 @@
             <form class="form" method="GET" action="{% url 'products' %}">
                 <div class="input-group w-100">
                     <input class="form-control border border-black rounded-0" type="text" name="q"
-                        placeholder="Search our site">
+                        placeholder="Search our site" aria-label="Enter Search Term">
                     <div class="input-group-append">
-                        <button class="form-control form-control btn btn-black border border-black" type="submit">
+                        <button class="form-control form-control btn btn-black border border-black" type="submit"
+                            aria-label="Search">
                             <span class="icon">
                                 <i class="fas fa-search"></i>
                             </span>
@@ -26,7 +27,7 @@
     </li>
     <li class="list-inline-item dropdown">
         <!-- Display account dropdown -->
-        <a class="text-black nav-link d-block d-md-none" href="#" id="user-options-mobile" data-toggle="dropdown"
+        <a class="text-white nav-link d-block d-md-none" href="#" id="user-options-mobile" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
                 <div><i class="fas fa-id-card fa-lg"></i></div>
