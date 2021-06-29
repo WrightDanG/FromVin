@@ -237,7 +237,26 @@ On making the change, the validator suggests that the change is much better:
 This is somewhat limited as you'd struggle to get to pages that require a login, but the exercise is useful, in my opinion.
 
 #### Internal custom validation
-Note for future - code to disable form and test webhooks can be found in BA profile video 9, at the end. form.submit in stripe_elements.js.
+
+Unfortunately I have not been able to write a suite of automated test cases for the project. These wouldn't be a substitute for manual testing on a project such as this and time has limited me to manual only, on this occasion.
+
+One of the main redundancies that was taught in in the Code Institute course in reference to an e-commerce site, is a backup for payments should the form not submit. I've carried these redundancies over into this project and have tested here by removing the form.submit() call in stripe_elements.js. The webhook successfully substitutes in and allows the payment to complete.
+
+
+In addition, a combination of django built in validation, stripe authentication and redundancies in the views means that most of the vulnerabilities you would see in a site like this are handled. For example:
+
+![image](https://user-images.githubusercontent.com/61311614/123861010-90695300-d91e-11eb-9743-04d93d5fd550.png)
+
+![image](https://user-images.githubusercontent.com/61311614/123861167-c27ab500-d91e-11eb-8baf-dd17d811d57d.png)
+
+![image](https://user-images.githubusercontent.com/61311614/123861229-d9210c00-d91e-11eb-8a42-8497c0f00430.png)
+
+![image](https://user-images.githubusercontent.com/61311614/123861324-f1912680-d91e-11eb-8b42-c2ffadc291d6.png)
+
+![image](https://user-images.githubusercontent.com/61311614/123861528-31f0a480-d91f-11eb-988b-582fdbf7a7c2.png)
+
+![image](https://user-images.githubusercontent.com/61311614/123861565-3c12a300-d91f-11eb-9a8a-c1ec2e51703c.png)
+
 
 
 
