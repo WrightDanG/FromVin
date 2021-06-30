@@ -570,11 +570,11 @@ Getting Heroku to deploy a version of this project is incredibly simple. The bel
 - Confirm that the Procfile has been successfully created per the 'local' instructions above. Heroku will require this for a live deployment.
 - Create a Heroku Login.
 - Create a Heroku application - it must have a unique name.
-- Install Heroku into your project via command line (pip3 install django-heroku)
+- Install Heroku into your project via command line (`pip3 install django-heroku`)
 - Under 'Deploy', click 'Connect to GitHub' and link it to the repository.
 - Under 'Settings', 'Reveal Config Vars' and add your IP, Port, Secret Key and stripe details.
 - Back under 'Deploy', 'Enable Automatic Deploys' can be now be selected so the project will deploy every time there is a new GitHub commit.
-- Ensure that the new url is added to the 'ALLOWED_HOSTS' in settings.py
+- Ensure that the new url is added to the '`ALLOWED_HOSTS`' in settings.py
 - From here it's as simple as clicking 'Open App' for a instance of the application to run.
 
 For this particular project, the site can be found at: https://fromvin.herokuapp.com/
@@ -585,10 +585,10 @@ The following procedure is taken from Code Institute on how to do this:
 
 - Make sure your manage.py file is connected to your mysql database
 - Use this command to backup your current database and load it into a db.json file:
-    ./manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json
+    `./manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json`
 - Connect your manage.py file to your postgres database
 - Then use this command to load your data from the db.json file into postgres:
-    ./manage.py loaddata db.json
+    `./manage.py loaddata db.json`
 
 
 This then gets a little more complicated due to how Django deals with static files. Whilst they are served correctly by Gitpod locally, when it comes to a live deployment, additional infrastructure is required. 
@@ -604,35 +604,31 @@ The following steps were taken:
 - Navigate to 'Add-ons' once within your Heroku project, on the Heroku portal
 - Search for 'Cloudinary'
 - Click install, and enter Heroku payment details if required. Choose the free version however, the payment details should not be needed to be used. 
-- Install both Cloudinary and Whitenoise into the project via console command (pip3 install cloudinary django-cloudinary-storage whitenoise)
-- Ensure the requirements are added to requirements.txt (pip3 freeze > requirements.txt)
+- Install both Cloudinary and Whitenoise into the project via console command (`pip3 install cloudinary django-cloudinary-storage whitenoise`)
+- Ensure the requirements are added to requirements.txt (`pip3 freeze > requirements.txt`)
 - Ensure they are added to installed apps in settings.py
-- Add the following to middleware to support Whitenoise 'whitenoise.middleware.WhiteNoiseMiddleware'
+- Add the following to middleware to support Whitenoise `whitenoise.middleware.WhiteNoiseMiddleware`
 - The Cloudinary portal will have a url with the needed keys. This url can be added to Heroku settings and accessed via settings.py. 
-Personally, I have been using dj_database for database settings and have used the following to get the postgres database to link up: 'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+Personally, I have been using dj_database for database settings and have used the following to get the postgres database to link up: `'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))`
 
 Static files locations can be set in settings.py - the code from this project is as follows:
 
-# Heroku static collection settings
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
+Heroku static collection settings
+`STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')`
+`STATIC_URL = '/static/'`
 
-# Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+Extra places for collectstatic to find static files.
+`STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),``
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+`STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'`
 
-# Media files served in live via Cloudinary
+Media files served in live via Cloudinary
 
-CLOUDINARY_STORAGE = {
-    'CLOUDINARY_URL': os.getenv('CLOUDINARY_URL', '')
-}
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-IMAGE_URL = # Custom cloudinary url
+`CLOUDINARY_STORAGE = {'CLOUDINARY_URL': os.getenv('CLOUDINARY_URL', '')}`
+`DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'`
+`IMAGE_URL = # Custom cloudinary url`
 
-Generally speaking that additional IMAGE_URL setting should not be necessary, but I personally had a little trouble with serving some specific media files, so used this as a solution. The other settings allow Cloudinary to serve media files and Whitenoise to serve the other static files and barring any issues, the live site should now match the local site.
+Generally speaking that additional `IMAGE_URL` setting should not be necessary, but I personally had a little trouble with serving some specific media files, so used this as a solution. The other settings allow Cloudinary to serve media files and Whitenoise to serve the other static files and barring any issues, the live site should now match the local site.
 
 
 
@@ -886,7 +882,7 @@ My thanks go to Can as a mentor throughout, and Gerry who stood in for the initi
 
 
 ## Attribution
-- Primary credit goes to the Boutique Ado project, of which a majority of the store functionality is inherited from.
+- A significant credit goes to the Boutique Ado project, of which a majority of the store functionality is inherited from.
 - External links to wine tasting guides found at the [WineFolly](https://winefolly.com/) resource. 
 - Assistance with adding Django messages found at [Ordinarycoders.com](https://www.ordinarycoders.com/blog/article/django-messages-framework)
 - Assistance with deploying static files with heroku found at [dev.to](https://dev.to/developerroad/tutorial-deploying-a-django-app-on-heroku-4k6o) 
